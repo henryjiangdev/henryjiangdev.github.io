@@ -64,16 +64,30 @@
 			padding-right: 15%;
 		}
 	</style>
+	<script>
+		function changeContent(src){
+			var xhr= new XMLHttpRequest();
+			xhr.open('GET', src, true);
+			xhr.onreadystatechange= function() {
+				if (this.readyState!==4) return;
+				if (this.status!==200) return; // or whatever error handling you want
+				document.getElementById('main-content').innerHTML = this.responseText;
+			};
+			xhr.send();
+		}
+	</script>
 	<body>
 		<div id="sidebar">
 			<div id="name"><h2>H J</h2></div>
-			<div class="sidebar-div"><a href="index.html">Home</a></div><br>
-			<div class="sidebar-div"><a href="">Games</a></div><br>
-			<div class="sidebar-div"><a href="">Trading</a></div><br>
-			<div class="sidebar-div"><a href="">Data Sets</a></div><br>
+			<div class="sidebar-div"><a href="">Home</a></div><br>
+			<div class="sidebar-div"><a href="" onclick="changeContent('')">Games</a></div><br>
+			<div class="sidebar-div"><a href="" onclick="changeContent('/trading/strategies/1.html')">Trading</a></div><br>
+			<div class="sidebar-div"><a href="" onclick="changeContent('')">Data Sets</a></div><br>
 		</div>
 		<div id="main">
-			<div id="main-content"></div>
+			<div id="main-content">
+				<script id="change" src=""></script>
+			</div>
 		</div>
 	</body>
 </html>
