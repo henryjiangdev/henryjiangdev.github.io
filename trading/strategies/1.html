@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html id="land">
-	<script defer src=" ">
+	<script>
 		var xhr= new XMLHttpRequest();
 		xhr.open('GET', '../../template.html', true);
 		xhr.onreadystatechange= function() {
@@ -9,8 +9,6 @@
 			document.getElementById('land').innerHTML = this.responseText;
 		};
 		xhr.send();
-	</script>
-	<script defer src=" ">
 		document.getElementById('main-content').innerHTML = `
 			<p>hello world</p>
 		`
