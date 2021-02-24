@@ -6,8 +6,13 @@
 		xhr.onreadystatechange= function() {
 			if (this.readyState!==4) return;
 			if (this.status!==200) return; // or whatever error handling you want
-			document.getElementById('land').innerHTML= this.responseText;
+			document.getElementById('land').innerHTML = this.responseText;
 		};
 		xhr.send();
+	</script>
+	<script defer>
+		document.getElementById('main-content').innerHTML = `
+			<p>hello world</p>
+		`
 	</script>
 </html>
