@@ -4,8 +4,11 @@
 		border-collapse: collapse;
 		text-align: center;
 	}
-	.first, .second{
+	.insight-left{
 		width: 25%;
+	}
+	.info{
+		width: 15%;
 	}
 </style>
 <h2 style="text-align: center;">Trading</h2><hr>
@@ -13,8 +16,8 @@
 <h3 style="text-align: center;">Insights</h3>
 <table style="width:100%">
 	<tr>
-		<th class="first">Link</th>
-		<th class="second">Date Created</th>
+		<th class="insight-left">Link</th>
+		<th class="insight-left">Date Created</th>
 		<th>Description</th>
 	</tr>
 	<tr>
@@ -26,13 +29,21 @@
 <h3 style="text-align: center;">Strategies</h3>
 <table style="width:100%">
 	<tr>
-		<th class="first">Link</th>
-		<th class="second">Date Created</th>
+		<th class="info">Link</th>
+		<th class="info">Date Created</th>
+		<th class="info">Expected Value</th>
 		<th>Description</th>
 	</tr>
 	<tr>
 		<td><a onclick="changeContent('/trading/strategies/1.html')">trading_strat1</a></td>
 		<td>02/23/2021</td>
-		<td></td>
+		<td style="background-color:green;">+$0.3181</td>
+		<td>long on low pivot</td>
+	</tr>	
+	<tr>
+		<td><a onclick="changeContent('/trading/strategies/2.html')">trading_strat2</a></td>
+		<td>02/24/2021</td>
+		<td style="background-color:red;">-$0.4704</td>
+		<td>opposite of trading_strat1</td>
 	</tr>
 </table> 

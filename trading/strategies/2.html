@@ -1,0 +1,4053 @@
+<h2 style="text-align:center;">trading_strategy2</h2><br><hr>
+<p>Description: Inverse of trading_strategy1. Honestly thought it would make money but it seems like it doesn't. trading_strategy1 is long only, this one is just the inverse of it, which uses tops instead of bottoms to trade.</p>
+<p>Win%: 56%, Average Events: 42.59, Total PnL:-$17663.06, Expected Value: -$0.4704, Total Trades: 21509, Range[02/25/2021, 02/24/2021]. Might use this and try to go long to see how it goes as trading_strategy3.</p>
+<h3 style="text-align:center;">DATA</h3>
+<table class="table table-bordered table-hover table-condensed" style="margin-left:auto;margin-right:auto;">
+<thead><tr><th title="Field #1">FIELD1</th>
+<th title="Field #2">Symbol</th>
+<th title="Field #3">Win%</th>
+<th title="Field #4">ExpectedValue</th>
+<th title="Field #5">TotalEvents</th>
+<th title="Field #6">PnL</th>
+</tr></thead>
+<tbody><tr>
+<td align="right">0</td>
+<td>MMM</td>
+<td align="right">0.54</td>
+<td align="right">-0.4</td>
+<td align="right">46</td>
+<td align="right">-18.41</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td>ABT</td>
+<td align="right">0.56</td>
+<td align="right">-0.34</td>
+<td align="right">41</td>
+<td align="right">-14.07</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td>ABBV</td>
+<td align="right">0.52</td>
+<td align="right">-0.81</td>
+<td align="right">48</td>
+<td align="right">-39.0</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td>ABMD</td>
+<td align="right">0.49</td>
+<td align="right">-1.19</td>
+<td align="right">41</td>
+<td align="right">-48.67</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td>ACN</td>
+<td align="right">0.46</td>
+<td align="right">-2.46</td>
+<td align="right">46</td>
+<td align="right">-113.29</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td>ATVI</td>
+<td align="right">0.55</td>
+<td align="right">-0.41</td>
+<td align="right">42</td>
+<td align="right">-17.22</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td>ADBE</td>
+<td align="right">0.39</td>
+<td align="right">-9.51</td>
+<td align="right">38</td>
+<td align="right">-361.41</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td>AMD</td>
+<td align="right">0.53</td>
+<td align="right">-1.18</td>
+<td align="right">43</td>
+<td align="right">-50.77</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td>AAP</td>
+<td align="right">0.55</td>
+<td align="right">-0.39</td>
+<td align="right">42</td>
+<td align="right">-16.51</td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td>AES</td>
+<td align="right">0.45</td>
+<td align="right">-0.17</td>
+<td align="right">38</td>
+<td align="right">-6.63</td>
+</tr>
+<tr>
+<td align="right">10</td>
+<td>AFL</td>
+<td align="right">0.5</td>
+<td align="right">-0.36</td>
+<td align="right">50</td>
+<td align="right">-18.23</td>
+</tr>
+<tr>
+<td align="right">11</td>
+<td>A</td>
+<td align="right">0.43</td>
+<td align="right">-1.14</td>
+<td align="right">42</td>
+<td align="right">-47.8</td>
+</tr>
+<tr>
+<td align="right">12</td>
+<td>APD</td>
+<td align="right">0.59</td>
+<td align="right">-0.48</td>
+<td align="right">46</td>
+<td align="right">-22.07</td>
+</tr>
+<tr>
+<td align="right">13</td>
+<td>AKAM</td>
+<td align="right">0.53</td>
+<td align="right">-1.25</td>
+<td align="right">38</td>
+<td align="right">-47.41</td>
+</tr>
+<tr>
+<td align="right">14</td>
+<td>ALK</td>
+<td align="right">0.59</td>
+<td align="right">-0.67</td>
+<td align="right">44</td>
+<td align="right">-29.58</td>
+</tr>
+<tr>
+<td align="right">15</td>
+<td>ALB</td>
+<td align="right">0.49</td>
+<td align="right">-0.96</td>
+<td align="right">51</td>
+<td align="right">-49.07</td>
+</tr>
+<tr>
+<td align="right">16</td>
+<td>ARE</td>
+<td align="right">0.6</td>
+<td align="right">0.12</td>
+<td align="right">47</td>
+<td align="right">5.74</td>
+</tr>
+<tr>
+<td align="right">17</td>
+<td>ALXN</td>
+<td align="right">0.56</td>
+<td align="right">-1.14</td>
+<td align="right">36</td>
+<td align="right">-40.86</td>
+</tr>
+<tr>
+<td align="right">18</td>
+<td>ALGN</td>
+<td align="right">0.52</td>
+<td align="right">-4.86</td>
+<td align="right">44</td>
+<td align="right">-213.65</td>
+</tr>
+<tr>
+<td align="right">19</td>
+<td>ALLE</td>
+<td align="right">0.62</td>
+<td align="right">-0.27</td>
+<td align="right">42</td>
+<td align="right">-11.27</td>
+</tr>
+<tr>
+<td align="right">20</td>
+<td>LNT</td>
+<td align="right">0.6</td>
+<td align="right">0.06</td>
+<td align="right">43</td>
+<td align="right">2.76</td>
+</tr>
+<tr>
+<td align="right">21</td>
+<td>ALL</td>
+<td align="right">0.5</td>
+<td align="right">-1.01</td>
+<td align="right">46</td>
+<td align="right">-46.4</td>
+</tr>
+<tr>
+<td align="right">22</td>
+<td>GOOGL</td>
+<td align="right">0.59</td>
+<td align="right">-1.76</td>
+<td align="right">46</td>
+<td align="right">-81.16</td>
+</tr>
+<tr>
+<td align="right">23</td>
+<td>GOOG</td>
+<td align="right">0.54</td>
+<td align="right">-2.54</td>
+<td align="right">46</td>
+<td align="right">-117.0</td>
+</tr>
+<tr>
+<td align="right">24</td>
+<td>MO</td>
+<td align="right">0.56</td>
+<td align="right">-0.04</td>
+<td align="right">45</td>
+<td align="right">-1.58</td>
+</tr>
+<tr>
+<td align="right">25</td>
+<td>AMZN</td>
+<td align="right">0.5</td>
+<td align="right">-36.02</td>
+<td align="right">40</td>
+<td align="right">-1440.67</td>
+</tr>
+<tr>
+<td align="right">26</td>
+<td>AMCR</td>
+<td align="right">0.5</td>
+<td align="right">-0.1</td>
+<td align="right">46</td>
+<td align="right">-4.4</td>
+</tr>
+<tr>
+<td align="right">27</td>
+<td>AEE</td>
+<td align="right">0.64</td>
+<td align="right">0.23</td>
+<td align="right">47</td>
+<td align="right">10.63</td>
+</tr>
+<tr>
+<td align="right">28</td>
+<td>AAL</td>
+<td align="right">0.7</td>
+<td align="right">0.23</td>
+<td align="right">37</td>
+<td align="right">8.67</td>
+</tr>
+<tr>
+<td align="right">29</td>
+<td>AEP</td>
+<td align="right">0.68</td>
+<td align="right">0.58</td>
+<td align="right">34</td>
+<td align="right">19.82</td>
+</tr>
+<tr>
+<td align="right">30</td>
+<td>AXP</td>
+<td align="right">0.54</td>
+<td align="right">-0.35</td>
+<td align="right">39</td>
+<td align="right">-13.82</td>
+</tr>
+<tr>
+<td align="right">31</td>
+<td>AIG</td>
+<td align="right">0.56</td>
+<td align="right">-0.24</td>
+<td align="right">43</td>
+<td align="right">-10.48</td>
+</tr>
+<tr>
+<td align="right">32</td>
+<td>AMT</td>
+<td align="right">0.66</td>
+<td align="right">0.89</td>
+<td align="right">44</td>
+<td align="right">39.17</td>
+</tr>
+<tr>
+<td align="right">33</td>
+<td>AWK</td>
+<td align="right">0.72</td>
+<td align="right">0.86</td>
+<td align="right">43</td>
+<td align="right">37.15</td>
+</tr>
+<tr>
+<td align="right">34</td>
+<td>AMP</td>
+<td align="right">0.63</td>
+<td align="right">0.27</td>
+<td align="right">51</td>
+<td align="right">13.57</td>
+</tr>
+<tr>
+<td align="right">35</td>
+<td>ABC</td>
+<td align="right">0.59</td>
+<td align="right">-0.84</td>
+<td align="right">44</td>
+<td align="right">-37.01</td>
+</tr>
+<tr>
+<td align="right">36</td>
+<td>AME</td>
+<td align="right">0.49</td>
+<td align="right">-0.83</td>
+<td align="right">37</td>
+<td align="right">-30.74</td>
+</tr>
+<tr>
+<td align="right">37</td>
+<td>AMGN</td>
+<td align="right">0.61</td>
+<td align="right">-1.04</td>
+<td align="right">44</td>
+<td align="right">-45.85</td>
+</tr>
+<tr>
+<td align="right">38</td>
+<td>APH</td>
+<td align="right">0.49</td>
+<td align="right">-0.8</td>
+<td align="right">45</td>
+<td align="right">-35.83</td>
+</tr>
+<tr>
+<td align="right">39</td>
+<td>ADI</td>
+<td align="right">0.59</td>
+<td align="right">-0.81</td>
+<td align="right">46</td>
+<td align="right">-37.37</td>
+</tr>
+<tr>
+<td align="right">40</td>
+<td>ANSS</td>
+<td align="right">0.6</td>
+<td align="right">-1.51</td>
+<td align="right">43</td>
+<td align="right">-64.86</td>
+</tr>
+<tr>
+<td align="right">41</td>
+<td>ANTM</td>
+<td align="right">0.76</td>
+<td align="right">1.29</td>
+<td align="right">42</td>
+<td align="right">54.25</td>
+</tr>
+<tr>
+<td align="right">42</td>
+<td>AON</td>
+<td align="right">0.61</td>
+<td align="right">0.09</td>
+<td align="right">41</td>
+<td align="right">3.7</td>
+</tr>
+<tr>
+<td align="right">43</td>
+<td>AOS</td>
+<td align="right">0.57</td>
+<td align="right">-0.34</td>
+<td align="right">44</td>
+<td align="right">-14.91</td>
+</tr>
+<tr>
+<td align="right">44</td>
+<td>APA</td>
+<td align="right">0.66</td>
+<td align="right">-0.01</td>
+<td align="right">47</td>
+<td align="right">-0.53</td>
+</tr>
+<tr>
+<td align="right">45</td>
+<td>AAPL</td>
+<td align="right">0.53</td>
+<td align="right">-0.47</td>
+<td align="right">43</td>
+<td align="right">-20.19</td>
+</tr>
+<tr>
+<td align="right">46</td>
+<td>AMAT</td>
+<td align="right">0.43</td>
+<td align="right">-0.91</td>
+<td align="right">44</td>
+<td align="right">-39.91</td>
+</tr>
+<tr>
+<td align="right">47</td>
+<td>APTV</td>
+<td align="right">0.5</td>
+<td align="right">-0.88</td>
+<td align="right">52</td>
+<td align="right">-45.96</td>
+</tr>
+<tr>
+<td align="right">48</td>
+<td>ADM</td>
+<td align="right">0.47</td>
+<td align="right">-0.42</td>
+<td align="right">47</td>
+<td align="right">-19.92</td>
+</tr>
+<tr>
+<td align="right">49</td>
+<td>ANET</td>
+<td align="right">0.58</td>
+<td align="right">-0.13</td>
+<td align="right">48</td>
+<td align="right">-6.03</td>
+</tr>
+<tr>
+<td align="right">50</td>
+<td>AJG</td>
+<td align="right">0.47</td>
+<td align="right">-0.85</td>
+<td align="right">40</td>
+<td align="right">-34.19</td>
+</tr>
+<tr>
+<td align="right">51</td>
+<td>AIZ</td>
+<td align="right">0.51</td>
+<td align="right">-1.07</td>
+<td align="right">39</td>
+<td align="right">-41.62</td>
+</tr>
+<tr>
+<td align="right">52</td>
+<td>T</td>
+<td align="right">0.67</td>
+<td align="right">0.07</td>
+<td align="right">45</td>
+<td align="right">2.99</td>
+</tr>
+<tr>
+<td align="right">53</td>
+<td>ATO</td>
+<td align="right">0.64</td>
+<td align="right">0.54</td>
+<td align="right">39</td>
+<td align="right">20.94</td>
+</tr>
+<tr>
+<td align="right">54</td>
+<td>ADSK</td>
+<td align="right">0.43</td>
+<td align="right">-4.02</td>
+<td align="right">44</td>
+<td align="right">-176.96</td>
+</tr>
+<tr>
+<td align="right">55</td>
+<td>ADP</td>
+<td align="right">0.58</td>
+<td align="right">-0.15</td>
+<td align="right">48</td>
+<td align="right">-7.26</td>
+</tr>
+<tr>
+<td align="right">56</td>
+<td>AZO</td>
+<td align="right">0.6</td>
+<td align="right">3.62</td>
+<td align="right">43</td>
+<td align="right">155.83</td>
+</tr>
+<tr>
+<td align="right">57</td>
+<td>AVB</td>
+<td align="right">0.52</td>
+<td align="right">-0.43</td>
+<td align="right">44</td>
+<td align="right">-19.06</td>
+</tr>
+<tr>
+<td align="right">58</td>
+<td>AVY</td>
+<td align="right">0.62</td>
+<td align="right">-0.18</td>
+<td align="right">42</td>
+<td align="right">-7.65</td>
+</tr>
+<tr>
+<td align="right">59</td>
+<td>BKR</td>
+<td align="right">0.5</td>
+<td align="right">-0.22</td>
+<td align="right">36</td>
+<td align="right">-7.92</td>
+</tr>
+<tr>
+<td align="right">60</td>
+<td>BLL</td>
+<td align="right">0.62</td>
+<td align="right">0.48</td>
+<td align="right">37</td>
+<td align="right">17.7</td>
+</tr>
+<tr>
+<td align="right">61</td>
+<td>BAC</td>
+<td align="right">0.57</td>
+<td align="right">-0.36</td>
+<td align="right">47</td>
+<td align="right">-16.97</td>
+</tr>
+<tr>
+<td align="right">62</td>
+<td>BK</td>
+<td align="right">0.57</td>
+<td align="right">-0.29</td>
+<td align="right">46</td>
+<td align="right">-13.41</td>
+</tr>
+<tr>
+<td align="right">63</td>
+<td>BAX</td>
+<td align="right">0.56</td>
+<td align="right">-0.28</td>
+<td align="right">52</td>
+<td align="right">-14.66</td>
+</tr>
+<tr>
+<td align="right">64</td>
+<td>BDX</td>
+<td align="right">0.66</td>
+<td align="right">0.6</td>
+<td align="right">50</td>
+<td align="right">29.82</td>
+</tr>
+<tr>
+<td align="right">65</td>
+<td>BRK-B</td>
+<td align="right">0.54</td>
+<td align="right">-0.42</td>
+<td align="right">48</td>
+<td align="right">-20.16</td>
+</tr>
+<tr>
+<td align="right">66</td>
+<td>BBY</td>
+<td align="right">0.55</td>
+<td align="right">-0.42</td>
+<td align="right">38</td>
+<td align="right">-15.97</td>
+</tr>
+<tr>
+<td align="right">67</td>
+<td>BIO</td>
+<td align="right">0.53</td>
+<td align="right">-1.09</td>
+<td align="right">40</td>
+<td align="right">-43.47</td>
+</tr>
+<tr>
+<td align="right">68</td>
+<td>BIIB</td>
+<td align="right">0.71</td>
+<td align="right">-0.28</td>
+<td align="right">35</td>
+<td align="right">-9.88</td>
+</tr>
+<tr>
+<td align="right">69</td>
+<td>BLK</td>
+<td align="right">0.47</td>
+<td align="right">-4.0</td>
+<td align="right">49</td>
+<td align="right">-195.9</td>
+</tr>
+<tr>
+<td align="right">70</td>
+<td>BA</td>
+<td align="right">0.74</td>
+<td align="right">0.75</td>
+<td align="right">47</td>
+<td align="right">35.22</td>
+</tr>
+<tr>
+<td align="right">71</td>
+<td>BKNG</td>
+<td align="right">0.62</td>
+<td align="right">-5.55</td>
+<td align="right">45</td>
+<td align="right">-249.72</td>
+</tr>
+<tr>
+<td align="right">72</td>
+<td>BWA</td>
+<td align="right">0.46</td>
+<td align="right">-0.71</td>
+<td align="right">41</td>
+<td align="right">-29.22</td>
+</tr>
+<tr>
+<td align="right">73</td>
+<td>BXP</td>
+<td align="right">0.71</td>
+<td align="right">0.31</td>
+<td align="right">42</td>
+<td align="right">13.18</td>
+</tr>
+<tr>
+<td align="right">74</td>
+<td>BSX</td>
+<td align="right">0.56</td>
+<td align="right">-0.34</td>
+<td align="right">34</td>
+<td align="right">-11.44</td>
+</tr>
+<tr>
+<td align="right">75</td>
+<td>BMY</td>
+<td align="right">0.65</td>
+<td align="right">0.32</td>
+<td align="right">49</td>
+<td align="right">15.5</td>
+</tr>
+<tr>
+<td align="right">76</td>
+<td>AVGO</td>
+<td align="right">0.39</td>
+<td align="right">-5.65</td>
+<td align="right">33</td>
+<td align="right">-186.43</td>
+</tr>
+<tr>
+<td align="right">77</td>
+<td>BR</td>
+<td align="right">0.41</td>
+<td align="right">-1.39</td>
+<td align="right">44</td>
+<td align="right">-61.13</td>
+</tr>
+<tr>
+<td align="right">78</td>
+<td>BF-B</td>
+<td align="right">0.54</td>
+<td align="right">-0.2</td>
+<td align="right">50</td>
+<td align="right">-9.96</td>
+</tr>
+<tr>
+<td align="right">79</td>
+<td>CHRW</td>
+<td align="right">0.34</td>
+<td align="right">-1.32</td>
+<td align="right">41</td>
+<td align="right">-53.98</td>
+</tr>
+<tr>
+<td align="right">80</td>
+<td>COG</td>
+<td align="right">0.54</td>
+<td align="right">-0.23</td>
+<td align="right">39</td>
+<td align="right">-8.8</td>
+</tr>
+<tr>
+<td align="right">81</td>
+<td>CDNS</td>
+<td align="right">0.43</td>
+<td align="right">-1.63</td>
+<td align="right">42</td>
+<td align="right">-68.37</td>
+</tr>
+<tr>
+<td align="right">82</td>
+<td>CPB</td>
+<td align="right">0.46</td>
+<td align="right">-0.29</td>
+<td align="right">35</td>
+<td align="right">-10.23</td>
+</tr>
+<tr>
+<td align="right">83</td>
+<td>COF</td>
+<td align="right">0.59</td>
+<td align="right">-0.66</td>
+<td align="right">34</td>
+<td align="right">-22.33</td>
+</tr>
+<tr>
+<td align="right">84</td>
+<td>CAH</td>
+<td align="right">0.72</td>
+<td align="right">0.02</td>
+<td align="right">46</td>
+<td align="right">1.11</td>
+</tr>
+<tr>
+<td align="right">85</td>
+<td>KMX</td>
+<td align="right">0.68</td>
+<td align="right">-0.09</td>
+<td align="right">41</td>
+<td align="right">-3.87</td>
+</tr>
+<tr>
+<td align="right">86</td>
+<td>CCL</td>
+<td align="right">0.57</td>
+<td align="right">-0.11</td>
+<td align="right">40</td>
+<td align="right">-4.32</td>
+</tr>
+<tr>
+<td align="right">87</td>
+<td>CARR</td>
+<td align="right">0.57</td>
+<td align="right">-0.32</td>
+<td align="right">35</td>
+<td align="right">-11.36</td>
+</tr>
+<tr>
+<td align="right">88</td>
+<td>CTLT</td>
+<td align="right">0.58</td>
+<td align="right">-0.28</td>
+<td align="right">45</td>
+<td align="right">-12.68</td>
+</tr>
+<tr>
+<td align="right">89</td>
+<td>CAT</td>
+<td align="right">0.43</td>
+<td align="right">-1.91</td>
+<td align="right">37</td>
+<td align="right">-70.59</td>
+</tr>
+<tr>
+<td align="right">90</td>
+<td>CBOE</td>
+<td align="right">0.64</td>
+<td align="right">0.11</td>
+<td align="right">44</td>
+<td align="right">4.84</td>
+</tr>
+<tr>
+<td align="right">91</td>
+<td>CBRE</td>
+<td align="right">0.62</td>
+<td align="right">-0.26</td>
+<td align="right">37</td>
+<td align="right">-9.52</td>
+</tr>
+<tr>
+<td align="right">92</td>
+<td>CDW</td>
+<td align="right">0.58</td>
+<td align="right">-0.32</td>
+<td align="right">38</td>
+<td align="right">-12.24</td>
+</tr>
+<tr>
+<td align="right">93</td>
+<td>CE</td>
+<td align="right">0.6</td>
+<td align="right">-0.11</td>
+<td align="right">42</td>
+<td align="right">-4.62</td>
+</tr>
+<tr>
+<td align="right">94</td>
+<td>CNC</td>
+<td align="right">0.68</td>
+<td align="right">0.2</td>
+<td align="right">41</td>
+<td align="right">8.29</td>
+</tr>
+<tr>
+<td align="right">95</td>
+<td>CNP</td>
+<td align="right">0.52</td>
+<td align="right">-0.16</td>
+<td align="right">44</td>
+<td align="right">-7.25</td>
+</tr>
+<tr>
+<td align="right">96</td>
+<td>CERN</td>
+<td align="right">0.57</td>
+<td align="right">-0.16</td>
+<td align="right">49</td>
+<td align="right">-7.93</td>
+</tr>
+<tr>
+<td align="right">97</td>
+<td>CF</td>
+<td align="right">0.48</td>
+<td align="right">-0.68</td>
+<td align="right">48</td>
+<td align="right">-32.45</td>
+</tr>
+<tr>
+<td align="right">98</td>
+<td>SCHW</td>
+<td align="right">0.42</td>
+<td align="right">-0.86</td>
+<td align="right">48</td>
+<td align="right">-41.47</td>
+</tr>
+<tr>
+<td align="right">99</td>
+<td>CHTR</td>
+<td align="right">0.46</td>
+<td align="right">-7.22</td>
+<td align="right">39</td>
+<td align="right">-281.53</td>
+</tr>
+<tr>
+<td align="right">100</td>
+<td>CVX</td>
+<td align="right">0.64</td>
+<td align="right">0.19</td>
+<td align="right">45</td>
+<td align="right">8.34</td>
+</tr>
+<tr>
+<td align="right">101</td>
+<td>CMG</td>
+<td align="right">0.46</td>
+<td align="right">-15.26</td>
+<td align="right">37</td>
+<td align="right">-564.53</td>
+</tr>
+<tr>
+<td align="right">102</td>
+<td>CB</td>
+<td align="right">0.5</td>
+<td align="right">-2.01</td>
+<td align="right">46</td>
+<td align="right">-92.4</td>
+</tr>
+<tr>
+<td align="right">103</td>
+<td>CHD</td>
+<td align="right">0.63</td>
+<td align="right">-0.03</td>
+<td align="right">49</td>
+<td align="right">-1.42</td>
+</tr>
+<tr>
+<td align="right">104</td>
+<td>CI</td>
+<td align="right">0.59</td>
+<td align="right">-1.15</td>
+<td align="right">41</td>
+<td align="right">-47.1</td>
+</tr>
+<tr>
+<td align="right">105</td>
+<td>CINF</td>
+<td align="right">0.58</td>
+<td align="right">-0.38</td>
+<td align="right">48</td>
+<td align="right">-18.4</td>
+</tr>
+<tr>
+<td align="right">106</td>
+<td>CTAS</td>
+<td align="right">0.63</td>
+<td align="right">-0.17</td>
+<td align="right">41</td>
+<td align="right">-7.07</td>
+</tr>
+<tr>
+<td align="right">107</td>
+<td>CSCO</td>
+<td align="right">0.56</td>
+<td align="right">0.01</td>
+<td align="right">43</td>
+<td align="right">0.47</td>
+</tr>
+<tr>
+<td align="right">108</td>
+<td>C</td>
+<td align="right">0.5</td>
+<td align="right">-0.28</td>
+<td align="right">46</td>
+<td align="right">-13.07</td>
+</tr>
+<tr>
+<td align="right">109</td>
+<td>CFG</td>
+<td align="right">0.56</td>
+<td align="right">-0.36</td>
+<td align="right">41</td>
+<td align="right">-14.74</td>
+</tr>
+<tr>
+<td align="right">110</td>
+<td>CTXS</td>
+<td align="right">0.54</td>
+<td align="right">-1.39</td>
+<td align="right">41</td>
+<td align="right">-57.01</td>
+</tr>
+<tr>
+<td align="right">111</td>
+<td>CLX</td>
+<td align="right">0.59</td>
+<td align="right">0.29</td>
+<td align="right">37</td>
+<td align="right">10.78</td>
+</tr>
+<tr>
+<td align="right">112</td>
+<td>CME</td>
+<td align="right">0.4</td>
+<td align="right">-3.12</td>
+<td align="right">48</td>
+<td align="right">-149.89</td>
+</tr>
+<tr>
+<td align="right">113</td>
+<td>CMS</td>
+<td align="right">0.61</td>
+<td align="right">0.52</td>
+<td align="right">44</td>
+<td align="right">22.87</td>
+</tr>
+<tr>
+<td align="right">114</td>
+<td>KO</td>
+<td align="right">0.6</td>
+<td align="right">0.14</td>
+<td align="right">42</td>
+<td align="right">5.72</td>
+</tr>
+<tr>
+<td align="right">115</td>
+<td>CTSH</td>
+<td align="right">0.61</td>
+<td align="right">-0.34</td>
+<td align="right">46</td>
+<td align="right">-15.76</td>
+</tr>
+<tr>
+<td align="right">116</td>
+<td>CL</td>
+<td align="right">0.66</td>
+<td align="right">0.13</td>
+<td align="right">47</td>
+<td align="right">6.13</td>
+</tr>
+<tr>
+<td align="right">117</td>
+<td>CMCSA</td>
+<td align="right">0.54</td>
+<td align="right">-0.3</td>
+<td align="right">41</td>
+<td align="right">-12.41</td>
+</tr>
+<tr>
+<td align="right">118</td>
+<td>CMA</td>
+<td align="right">0.48</td>
+<td align="right">-1.16</td>
+<td align="right">44</td>
+<td align="right">-50.93</td>
+</tr>
+<tr>
+<td align="right">119</td>
+<td>CAG</td>
+<td align="right">0.5</td>
+<td align="right">-0.21</td>
+<td align="right">40</td>
+<td align="right">-8.31</td>
+</tr>
+<tr>
+<td align="right">120</td>
+<td>COP</td>
+<td align="right">0.61</td>
+<td align="right">-0.3</td>
+<td align="right">38</td>
+<td align="right">-11.51</td>
+</tr>
+<tr>
+<td align="right">121</td>
+<td>ED</td>
+<td align="right">0.68</td>
+<td align="right">-0.08</td>
+<td align="right">40</td>
+<td align="right">-3.29</td>
+</tr>
+<tr>
+<td align="right">122</td>
+<td>STZ</td>
+<td align="right">0.76</td>
+<td align="right">0.92</td>
+<td align="right">37</td>
+<td align="right">33.88</td>
+</tr>
+<tr>
+<td align="right">123</td>
+<td>COO</td>
+<td align="right">0.64</td>
+<td align="right">1.2</td>
+<td align="right">45</td>
+<td align="right">53.81</td>
+</tr>
+<tr>
+<td align="right">124</td>
+<td>CPRT</td>
+<td align="right">0.55</td>
+<td align="right">-0.17</td>
+<td align="right">42</td>
+<td align="right">-7.22</td>
+</tr>
+<tr>
+<td align="right">125</td>
+<td>GLW</td>
+<td align="right">0.6</td>
+<td align="right">0.01</td>
+<td align="right">43</td>
+<td align="right">0.6</td>
+</tr>
+<tr>
+<td align="right">126</td>
+<td>CTVA</td>
+<td align="right">0.58</td>
+<td align="right">-0.04</td>
+<td align="right">45</td>
+<td align="right">-1.76</td>
+</tr>
+<tr>
+<td align="right">127</td>
+<td>COST</td>
+<td align="right">0.61</td>
+<td align="right">-0.15</td>
+<td align="right">41</td>
+<td align="right">-5.98</td>
+</tr>
+<tr>
+<td align="right">128</td>
+<td>CCI</td>
+<td align="right">0.74</td>
+<td align="right">1.22</td>
+<td align="right">43</td>
+<td align="right">52.25</td>
+</tr>
+<tr>
+<td align="right">129</td>
+<td>CSX</td>
+<td align="right">0.59</td>
+<td align="right">-0.61</td>
+<td align="right">44</td>
+<td align="right">-27.04</td>
+</tr>
+<tr>
+<td align="right">130</td>
+<td>CMI</td>
+<td align="right">0.52</td>
+<td align="right">-1.69</td>
+<td align="right">48</td>
+<td align="right">-81.22</td>
+</tr>
+<tr>
+<td align="right">131</td>
+<td>CVS</td>
+<td align="right">0.6</td>
+<td align="right">-0.24</td>
+<td align="right">40</td>
+<td align="right">-9.77</td>
+</tr>
+<tr>
+<td align="right">132</td>
+<td>DHI</td>
+<td align="right">0.49</td>
+<td align="right">-0.8</td>
+<td align="right">37</td>
+<td align="right">-29.77</td>
+</tr>
+<tr>
+<td align="right">133</td>
+<td>DHR</td>
+<td align="right">0.54</td>
+<td align="right">-0.34</td>
+<td align="right">46</td>
+<td align="right">-15.75</td>
+</tr>
+<tr>
+<td align="right">134</td>
+<td>DRI</td>
+<td align="right">0.53</td>
+<td align="right">-0.59</td>
+<td align="right">38</td>
+<td align="right">-22.51</td>
+</tr>
+<tr>
+<td align="right">135</td>
+<td>DVA</td>
+<td align="right">0.66</td>
+<td align="right">0.77</td>
+<td align="right">44</td>
+<td align="right">33.96</td>
+</tr>
+<tr>
+<td align="right">136</td>
+<td>DE</td>
+<td align="right">0.44</td>
+<td align="right">-1.51</td>
+<td align="right">45</td>
+<td align="right">-67.99</td>
+</tr>
+<tr>
+<td align="right">137</td>
+<td>DAL</td>
+<td align="right">0.51</td>
+<td align="right">-0.12</td>
+<td align="right">37</td>
+<td align="right">-4.44</td>
+</tr>
+<tr>
+<td align="right">138</td>
+<td>XRAY</td>
+<td align="right">0.67</td>
+<td align="right">-0.08</td>
+<td align="right">42</td>
+<td align="right">-3.44</td>
+</tr>
+<tr>
+<td align="right">139</td>
+<td>DVN</td>
+<td align="right">0.53</td>
+<td align="right">-0.14</td>
+<td align="right">38</td>
+<td align="right">-5.26</td>
+</tr>
+<tr>
+<td align="right">140</td>
+<td>DXCM</td>
+<td align="right">0.49</td>
+<td align="right">-4.05</td>
+<td align="right">37</td>
+<td align="right">-149.84</td>
+</tr>
+<tr>
+<td align="right">141</td>
+<td>FANG</td>
+<td align="right">0.69</td>
+<td align="right">0.09</td>
+<td align="right">45</td>
+<td align="right">3.95</td>
+</tr>
+<tr>
+<td align="right">142</td>
+<td>DLR</td>
+<td align="right">0.66</td>
+<td align="right">0.69</td>
+<td align="right">47</td>
+<td align="right">32.44</td>
+</tr>
+<tr>
+<td align="right">143</td>
+<td>DFS</td>
+<td align="right">0.55</td>
+<td align="right">-0.64</td>
+<td align="right">40</td>
+<td align="right">-25.42</td>
+</tr>
+<tr>
+<td align="right">144</td>
+<td>DISCA</td>
+<td align="right">0.54</td>
+<td align="right">-0.05</td>
+<td align="right">39</td>
+<td align="right">-1.96</td>
+</tr>
+<tr>
+<td align="right">145</td>
+<td>DISCK</td>
+<td align="right">0.58</td>
+<td align="right">-0.04</td>
+<td align="right">36</td>
+<td align="right">-1.33</td>
+</tr>
+<tr>
+<td align="right">146</td>
+<td>DISH</td>
+<td align="right">0.75</td>
+<td align="right">0.17</td>
+<td align="right">32</td>
+<td align="right">5.36</td>
+</tr>
+<tr>
+<td align="right">147</td>
+<td>DG</td>
+<td align="right">0.56</td>
+<td align="right">-0.92</td>
+<td align="right">45</td>
+<td align="right">-41.18</td>
+</tr>
+<tr>
+<td align="right">148</td>
+<td>DLTR</td>
+<td align="right">0.63</td>
+<td align="right">-0.31</td>
+<td align="right">43</td>
+<td align="right">-13.51</td>
+</tr>
+<tr>
+<td align="right">149</td>
+<td>D</td>
+<td align="right">0.5</td>
+<td align="right">-0.52</td>
+<td align="right">40</td>
+<td align="right">-20.89</td>
+</tr>
+<tr>
+<td align="right">150</td>
+<td>DPZ</td>
+<td align="right">0.57</td>
+<td align="right">-1.99</td>
+<td align="right">42</td>
+<td align="right">-83.75</td>
+</tr>
+<tr>
+<td align="right">151</td>
+<td>DOV</td>
+<td align="right">0.48</td>
+<td align="right">-1.31</td>
+<td align="right">48</td>
+<td align="right">-63.04</td>
+</tr>
+<tr>
+<td align="right">152</td>
+<td>DOW</td>
+<td align="right">0.52</td>
+<td align="right">-0.61</td>
+<td align="right">42</td>
+<td align="right">-25.8</td>
+</tr>
+<tr>
+<td align="right">153</td>
+<td>DTE</td>
+<td align="right">0.42</td>
+<td align="right">-1.97</td>
+<td align="right">38</td>
+<td align="right">-74.74</td>
+</tr>
+<tr>
+<td align="right">154</td>
+<td>DUK</td>
+<td align="right">0.5</td>
+<td align="right">-0.78</td>
+<td align="right">46</td>
+<td align="right">-35.76</td>
+</tr>
+<tr>
+<td align="right">155</td>
+<td>DRE</td>
+<td align="right">0.58</td>
+<td align="right">-0.19</td>
+<td align="right">38</td>
+<td align="right">-7.14</td>
+</tr>
+<tr>
+<td align="right">156</td>
+<td>DD</td>
+<td align="right">0.63</td>
+<td align="right">0.05</td>
+<td align="right">41</td>
+<td align="right">2.15</td>
+</tr>
+<tr>
+<td align="right">157</td>
+<td>DXC</td>
+<td align="right">0.6</td>
+<td align="right">-0.04</td>
+<td align="right">42</td>
+<td align="right">-1.77</td>
+</tr>
+<tr>
+<td align="right">158</td>
+<td>EMN</td>
+<td align="right">0.49</td>
+<td align="right">-0.99</td>
+<td align="right">35</td>
+<td align="right">-34.75</td>
+</tr>
+<tr>
+<td align="right">159</td>
+<td>ETN</td>
+<td align="right">0.46</td>
+<td align="right">-1.55</td>
+<td align="right">48</td>
+<td align="right">-74.46</td>
+</tr>
+<tr>
+<td align="right">160</td>
+<td>EBAY</td>
+<td align="right">0.71</td>
+<td align="right">0.49</td>
+<td align="right">35</td>
+<td align="right">17.21</td>
+</tr>
+<tr>
+<td align="right">161</td>
+<td>ECL</td>
+<td align="right">0.56</td>
+<td align="right">-0.38</td>
+<td align="right">45</td>
+<td align="right">-16.9</td>
+</tr>
+<tr>
+<td align="right">162</td>
+<td>EIX</td>
+<td align="right">0.5</td>
+<td align="right">-0.58</td>
+<td align="right">40</td>
+<td align="right">-23.36</td>
+</tr>
+<tr>
+<td align="right">163</td>
+<td>EW</td>
+<td align="right">0.66</td>
+<td align="right">0.14</td>
+<td align="right">41</td>
+<td align="right">5.73</td>
+</tr>
+<tr>
+<td align="right">164</td>
+<td>EA</td>
+<td align="right">0.44</td>
+<td align="right">-2.01</td>
+<td align="right">45</td>
+<td align="right">-90.3</td>
+</tr>
+<tr>
+<td align="right">165</td>
+<td>EMR</td>
+<td align="right">0.53</td>
+<td align="right">-0.91</td>
+<td align="right">45</td>
+<td align="right">-41.08</td>
+</tr>
+<tr>
+<td align="right">166</td>
+<td>ENPH</td>
+<td align="right">0.34</td>
+<td align="right">-5.43</td>
+<td align="right">38</td>
+<td align="right">-206.16</td>
+</tr>
+<tr>
+<td align="right">167</td>
+<td>ETR</td>
+<td align="right">0.59</td>
+<td align="right">-0.19</td>
+<td align="right">44</td>
+<td align="right">-8.24</td>
+</tr>
+<tr>
+<td align="right">168</td>
+<td>EOG</td>
+<td align="right">0.59</td>
+<td align="right">-0.41</td>
+<td align="right">39</td>
+<td align="right">-16.17</td>
+</tr>
+<tr>
+<td align="right">169</td>
+<td>EFX</td>
+<td align="right">0.65</td>
+<td align="right">0.97</td>
+<td align="right">40</td>
+<td align="right">38.8</td>
+</tr>
+<tr>
+<td align="right">170</td>
+<td>EQIX</td>
+<td align="right">0.66</td>
+<td align="right">2.79</td>
+<td align="right">47</td>
+<td align="right">131.12</td>
+</tr>
+<tr>
+<td align="right">171</td>
+<td>EQR</td>
+<td align="right">0.57</td>
+<td align="right">-0.07</td>
+<td align="right">37</td>
+<td align="right">-2.64</td>
+</tr>
+<tr>
+<td align="right">172</td>
+<td>ESS</td>
+<td align="right">0.55</td>
+<td align="right">-1.73</td>
+<td align="right">42</td>
+<td align="right">-72.79</td>
+</tr>
+<tr>
+<td align="right">173</td>
+<td>EL</td>
+<td align="right">0.6</td>
+<td align="right">0.17</td>
+<td align="right">48</td>
+<td align="right">8.4</td>
+</tr>
+<tr>
+<td align="right">174</td>
+<td>ETSY</td>
+<td align="right">0.64</td>
+<td align="right">-1.32</td>
+<td align="right">36</td>
+<td align="right">-47.61</td>
+</tr>
+<tr>
+<td align="right">175</td>
+<td>EVRG</td>
+<td align="right">0.62</td>
+<td align="right">0.28</td>
+<td align="right">48</td>
+<td align="right">13.3</td>
+</tr>
+<tr>
+<td align="right">176</td>
+<td>ES</td>
+<td align="right">0.76</td>
+<td align="right">1.06</td>
+<td align="right">45</td>
+<td align="right">47.89</td>
+</tr>
+<tr>
+<td align="right">177</td>
+<td>RE</td>
+<td align="right">0.58</td>
+<td align="right">-1.25</td>
+<td align="right">45</td>
+<td align="right">-56.36</td>
+</tr>
+<tr>
+<td align="right">178</td>
+<td>EXC</td>
+<td align="right">0.56</td>
+<td align="right">-0.15</td>
+<td align="right">52</td>
+<td align="right">-7.57</td>
+</tr>
+<tr>
+<td align="right">179</td>
+<td>EXPE</td>
+<td align="right">0.5</td>
+<td align="right">-0.71</td>
+<td align="right">44</td>
+<td align="right">-31.26</td>
+</tr>
+<tr>
+<td align="right">180</td>
+<td>EXPD</td>
+<td align="right">0.46</td>
+<td align="right">-0.62</td>
+<td align="right">46</td>
+<td align="right">-28.58</td>
+</tr>
+<tr>
+<td align="right">181</td>
+<td>EXR</td>
+<td align="right">0.31</td>
+<td align="right">-2.34</td>
+<td align="right">35</td>
+<td align="right">-81.92</td>
+</tr>
+<tr>
+<td align="right">182</td>
+<td>XOM</td>
+<td align="right">0.62</td>
+<td align="right">-0.22</td>
+<td align="right">40</td>
+<td align="right">-8.95</td>
+</tr>
+<tr>
+<td align="right">183</td>
+<td>FFIV</td>
+<td align="right">0.54</td>
+<td align="right">-0.54</td>
+<td align="right">35</td>
+<td align="right">-19.0</td>
+</tr>
+<tr>
+<td align="right">184</td>
+<td>FB</td>
+<td align="right">0.51</td>
+<td align="right">-1.47</td>
+<td align="right">43</td>
+<td align="right">-63.12</td>
+</tr>
+<tr>
+<td align="right">185</td>
+<td>FAST</td>
+<td align="right">0.5</td>
+<td align="right">-0.26</td>
+<td align="right">50</td>
+<td align="right">-12.99</td>
+</tr>
+<tr>
+<td align="right">186</td>
+<td>FRT</td>
+<td align="right">0.63</td>
+<td align="right">1.01</td>
+<td align="right">43</td>
+<td align="right">43.37</td>
+</tr>
+<tr>
+<td align="right">187</td>
+<td>FDX</td>
+<td align="right">0.47</td>
+<td align="right">-1.97</td>
+<td align="right">49</td>
+<td align="right">-96.33</td>
+</tr>
+<tr>
+<td align="right">188</td>
+<td>FIS</td>
+<td align="right">0.71</td>
+<td align="right">0.26</td>
+<td align="right">42</td>
+<td align="right">11.12</td>
+</tr>
+<tr>
+<td align="right">189</td>
+<td>FITB</td>
+<td align="right">0.47</td>
+<td align="right">-0.33</td>
+<td align="right">45</td>
+<td align="right">-15.04</td>
+</tr>
+<tr>
+<td align="right">190</td>
+<td>FE</td>
+<td align="right">0.48</td>
+<td align="right">-0.0</td>
+<td align="right">44</td>
+<td align="right">-0.17</td>
+</tr>
+<tr>
+<td align="right">191</td>
+<td>FRC</td>
+<td align="right">0.69</td>
+<td align="right">-0.19</td>
+<td align="right">36</td>
+<td align="right">-6.86</td>
+</tr>
+<tr>
+<td align="right">192</td>
+<td>FISV</td>
+<td align="right">0.57</td>
+<td align="right">-0.74</td>
+<td align="right">42</td>
+<td align="right">-31.12</td>
+</tr>
+<tr>
+<td align="right">193</td>
+<td>FLT</td>
+<td align="right">0.64</td>
+<td align="right">-0.68</td>
+<td align="right">45</td>
+<td align="right">-30.5</td>
+</tr>
+<tr>
+<td align="right">194</td>
+<td>FLIR</td>
+<td align="right">0.55</td>
+<td align="right">-0.2</td>
+<td align="right">49</td>
+<td align="right">-9.58</td>
+</tr>
+<tr>
+<td align="right">195</td>
+<td>FLS</td>
+<td align="right">0.57</td>
+<td align="right">-0.05</td>
+<td align="right">42</td>
+<td align="right">-2.27</td>
+</tr>
+<tr>
+<td align="right">196</td>
+<td>FMC</td>
+<td align="right">0.6</td>
+<td align="right">-0.2</td>
+<td align="right">43</td>
+<td align="right">-8.63</td>
+</tr>
+<tr>
+<td align="right">197</td>
+<td>F</td>
+<td align="right">0.56</td>
+<td align="right">-0.08</td>
+<td align="right">41</td>
+<td align="right">-3.25</td>
+</tr>
+<tr>
+<td align="right">198</td>
+<td>FTNT</td>
+<td align="right">0.37</td>
+<td align="right">-2.31</td>
+<td align="right">38</td>
+<td align="right">-87.92</td>
+</tr>
+<tr>
+<td align="right">199</td>
+<td>FTV</td>
+<td align="right">0.58</td>
+<td align="right">-0.25</td>
+<td align="right">48</td>
+<td align="right">-12.13</td>
+</tr>
+<tr>
+<td align="right">200</td>
+<td>FBHS</td>
+<td align="right">0.44</td>
+<td align="right">-0.39</td>
+<td align="right">43</td>
+<td align="right">-16.59</td>
+</tr>
+<tr>
+<td align="right">201</td>
+<td>FOXA</td>
+<td align="right">0.51</td>
+<td align="right">-0.47</td>
+<td align="right">43</td>
+<td align="right">-20.34</td>
+</tr>
+<tr>
+<td align="right">202</td>
+<td>FOX</td>
+<td align="right">0.49</td>
+<td align="right">-0.43</td>
+<td align="right">47</td>
+<td align="right">-20.19</td>
+</tr>
+<tr>
+<td align="right">203</td>
+<td>BEN</td>
+<td align="right">0.49</td>
+<td align="right">-0.22</td>
+<td align="right">51</td>
+<td align="right">-11.07</td>
+</tr>
+<tr>
+<td align="right">204</td>
+<td>FCX</td>
+<td align="right">0.45</td>
+<td align="right">-0.27</td>
+<td align="right">42</td>
+<td align="right">-11.18</td>
+</tr>
+<tr>
+<td align="right">205</td>
+<td>GPS</td>
+<td align="right">0.62</td>
+<td align="right">-0.23</td>
+<td align="right">37</td>
+<td align="right">-8.69</td>
+</tr>
+<tr>
+<td align="right">206</td>
+<td>GRMN</td>
+<td align="right">0.51</td>
+<td align="right">-0.38</td>
+<td align="right">37</td>
+<td align="right">-13.98</td>
+</tr>
+<tr>
+<td align="right">207</td>
+<td>IT</td>
+<td align="right">0.57</td>
+<td align="right">-0.75</td>
+<td align="right">44</td>
+<td align="right">-33.04</td>
+</tr>
+<tr>
+<td align="right">208</td>
+<td>GD</td>
+<td align="right">0.7</td>
+<td align="right">-0.1</td>
+<td align="right">50</td>
+<td align="right">-4.8</td>
+</tr>
+<tr>
+<td align="right">209</td>
+<td>GE</td>
+<td align="right">0.55</td>
+<td align="right">-0.14</td>
+<td align="right">42</td>
+<td align="right">-6.06</td>
+</tr>
+<tr>
+<td align="right">210</td>
+<td>GIS</td>
+<td align="right">0.81</td>
+<td align="right">0.55</td>
+<td align="right">36</td>
+<td align="right">19.87</td>
+</tr>
+<tr>
+<td align="right">211</td>
+<td>GM</td>
+<td align="right">0.68</td>
+<td align="right">-0.05</td>
+<td align="right">34</td>
+<td align="right">-1.69</td>
+</tr>
+<tr>
+<td align="right">212</td>
+<td>GPC</td>
+<td align="right">0.53</td>
+<td align="right">-0.25</td>
+<td align="right">34</td>
+<td align="right">-8.35</td>
+</tr>
+<tr>
+<td align="right">213</td>
+<td>GILD</td>
+<td align="right">0.67</td>
+<td align="right">-0.56</td>
+<td align="right">39</td>
+<td align="right">-22.0</td>
+</tr>
+<tr>
+<td align="right">214</td>
+<td>GL</td>
+<td align="right">0.6</td>
+<td align="right">-0.27</td>
+<td align="right">48</td>
+<td align="right">-13.14</td>
+</tr>
+<tr>
+<td align="right">215</td>
+<td>GPN</td>
+<td align="right">0.56</td>
+<td align="right">-0.91</td>
+<td align="right">43</td>
+<td align="right">-39.29</td>
+</tr>
+<tr>
+<td align="right">216</td>
+<td>GS</td>
+<td align="right">0.52</td>
+<td align="right">-2.16</td>
+<td align="right">42</td>
+<td align="right">-90.61</td>
+</tr>
+<tr>
+<td align="right">217</td>
+<td>GWW</td>
+<td align="right">0.57</td>
+<td align="right">-0.71</td>
+<td align="right">42</td>
+<td align="right">-29.62</td>
+</tr>
+<tr>
+<td align="right">218</td>
+<td>HAL</td>
+<td align="right">0.55</td>
+<td align="right">-0.19</td>
+<td align="right">42</td>
+<td align="right">-8.08</td>
+</tr>
+<tr>
+<td align="right">219</td>
+<td>HBI</td>
+<td align="right">0.59</td>
+<td align="right">-0.07</td>
+<td align="right">51</td>
+<td align="right">-3.82</td>
+</tr>
+<tr>
+<td align="right">220</td>
+<td>HIG</td>
+<td align="right">0.57</td>
+<td align="right">-0.31</td>
+<td align="right">47</td>
+<td align="right">-14.36</td>
+</tr>
+<tr>
+<td align="right">221</td>
+<td>HAS</td>
+<td align="right">0.55</td>
+<td align="right">-0.5</td>
+<td align="right">47</td>
+<td align="right">-23.62</td>
+</tr>
+<tr>
+<td align="right">222</td>
+<td>HCA</td>
+<td align="right">0.54</td>
+<td align="right">-0.59</td>
+<td align="right">41</td>
+<td align="right">-24.39</td>
+</tr>
+<tr>
+<td align="right">223</td>
+<td>PEAK</td>
+<td align="right">0.61</td>
+<td align="right">0.08</td>
+<td align="right">36</td>
+<td align="right">2.74</td>
+</tr>
+<tr>
+<td align="right">224</td>
+<td>HSIC</td>
+<td align="right">0.65</td>
+<td align="right">0.35</td>
+<td align="right">40</td>
+<td align="right">13.96</td>
+</tr>
+<tr>
+<td align="right">225</td>
+<td>HSY</td>
+<td align="right">0.81</td>
+<td align="right">1.61</td>
+<td align="right">42</td>
+<td align="right">67.45</td>
+</tr>
+<tr>
+<td align="right">226</td>
+<td>HES</td>
+<td align="right">0.6</td>
+<td align="right">-0.54</td>
+<td align="right">45</td>
+<td align="right">-24.13</td>
+</tr>
+<tr>
+<td align="right">227</td>
+<td>HPE</td>
+<td align="right">0.67</td>
+<td align="right">-0.0</td>
+<td align="right">42</td>
+<td align="right">-0.07</td>
+</tr>
+<tr>
+<td align="right">228</td>
+<td>HLT</td>
+<td align="right">0.69</td>
+<td align="right">0.07</td>
+<td align="right">42</td>
+<td align="right">3.0</td>
+</tr>
+<tr>
+<td align="right">229</td>
+<td>HFC</td>
+<td align="right">0.68</td>
+<td align="right">-0.12</td>
+<td align="right">41</td>
+<td align="right">-5.0</td>
+</tr>
+<tr>
+<td align="right">230</td>
+<td>HOLX</td>
+<td align="right">0.5</td>
+<td align="right">-0.62</td>
+<td align="right">44</td>
+<td align="right">-27.15</td>
+</tr>
+<tr>
+<td align="right">231</td>
+<td>HD</td>
+<td align="right">0.47</td>
+<td align="right">-2.07</td>
+<td align="right">40</td>
+<td align="right">-82.86</td>
+</tr>
+<tr>
+<td align="right">232</td>
+<td>HON</td>
+<td align="right">0.46</td>
+<td align="right">-0.97</td>
+<td align="right">48</td>
+<td align="right">-46.64</td>
+</tr>
+<tr>
+<td align="right">233</td>
+<td>HRL</td>
+<td align="right">0.64</td>
+<td align="right">0.2</td>
+<td align="right">42</td>
+<td align="right">8.42</td>
+</tr>
+<tr>
+<td align="right">234</td>
+<td>HST</td>
+<td align="right">0.68</td>
+<td align="right">0.06</td>
+<td align="right">44</td>
+<td align="right">2.79</td>
+</tr>
+<tr>
+<td align="right">235</td>
+<td>HWM</td>
+<td align="right">0.5</td>
+<td align="right">-0.05</td>
+<td align="right">38</td>
+<td align="right">-1.8</td>
+</tr>
+<tr>
+<td align="right">236</td>
+<td>HPQ</td>
+<td align="right">0.63</td>
+<td align="right">0.05</td>
+<td align="right">43</td>
+<td align="right">2.35</td>
+</tr>
+<tr>
+<td align="right">237</td>
+<td>HUM</td>
+<td align="right">0.63</td>
+<td align="right">-0.74</td>
+<td align="right">43</td>
+<td align="right">-31.61</td>
+</tr>
+<tr>
+<td align="right">238</td>
+<td>HBAN</td>
+<td align="right">0.54</td>
+<td align="right">-0.09</td>
+<td align="right">41</td>
+<td align="right">-3.73</td>
+</tr>
+<tr>
+<td align="right">239</td>
+<td>HII</td>
+<td align="right">0.74</td>
+<td align="right">1.9</td>
+<td align="right">39</td>
+<td align="right">74.1</td>
+</tr>
+<tr>
+<td align="right">240</td>
+<td>IEX</td>
+<td align="right">0.36</td>
+<td align="right">-2.71</td>
+<td align="right">42</td>
+<td align="right">-113.9</td>
+</tr>
+<tr>
+<td align="right">241</td>
+<td>IDXX</td>
+<td align="right">0.33</td>
+<td align="right">-10.02</td>
+<td align="right">40</td>
+<td align="right">-400.96</td>
+</tr>
+<tr>
+<td align="right">242</td>
+<td>INFO</td>
+<td align="right">0.45</td>
+<td align="right">-0.82</td>
+<td align="right">42</td>
+<td align="right">-34.43</td>
+</tr>
+<tr>
+<td align="right">243</td>
+<td>ITW</td>
+<td align="right">0.56</td>
+<td align="right">-1.54</td>
+<td align="right">52</td>
+<td align="right">-80.29</td>
+</tr>
+<tr>
+<td align="right">244</td>
+<td>ILMN</td>
+<td align="right">0.45</td>
+<td align="right">-2.85</td>
+<td align="right">47</td>
+<td align="right">-133.85</td>
+</tr>
+<tr>
+<td align="right">245</td>
+<td>INCY</td>
+<td align="right">0.64</td>
+<td align="right">-0.45</td>
+<td align="right">39</td>
+<td align="right">-17.41</td>
+</tr>
+<tr>
+<td align="right">246</td>
+<td>IR</td>
+<td align="right">0.58</td>
+<td align="right">-0.3</td>
+<td align="right">43</td>
+<td align="right">-13.04</td>
+</tr>
+<tr>
+<td align="right">247</td>
+<td>INTC</td>
+<td align="right">0.51</td>
+<td align="right">-0.16</td>
+<td align="right">35</td>
+<td align="right">-5.65</td>
+</tr>
+<tr>
+<td align="right">248</td>
+<td>ICE</td>
+<td align="right">0.43</td>
+<td align="right">-1.27</td>
+<td align="right">42</td>
+<td align="right">-53.13</td>
+</tr>
+<tr>
+<td align="right">249</td>
+<td>IBM</td>
+<td align="right">0.49</td>
+<td align="right">-1.37</td>
+<td align="right">49</td>
+<td align="right">-67.26</td>
+</tr>
+<tr>
+<td align="right">250</td>
+<td>IP</td>
+<td align="right">0.47</td>
+<td align="right">-0.65</td>
+<td align="right">43</td>
+<td align="right">-27.93</td>
+</tr>
+<tr>
+<td align="right">251</td>
+<td>IPG</td>
+<td align="right">0.57</td>
+<td align="right">-0.08</td>
+<td align="right">37</td>
+<td align="right">-3.14</td>
+</tr>
+<tr>
+<td align="right">252</td>
+<td>IFF</td>
+<td align="right">0.69</td>
+<td align="right">0.8</td>
+<td align="right">51</td>
+<td align="right">40.72</td>
+</tr>
+<tr>
+<td align="right">253</td>
+<td>INTU</td>
+<td align="right">0.44</td>
+<td align="right">-5.19</td>
+<td align="right">48</td>
+<td align="right">-249.36</td>
+</tr>
+<tr>
+<td align="right">254</td>
+<td>ISRG</td>
+<td align="right">0.5</td>
+<td align="right">-7.61</td>
+<td align="right">44</td>
+<td align="right">-334.71</td>
+</tr>
+<tr>
+<td align="right">255</td>
+<td>IVZ</td>
+<td align="right">0.66</td>
+<td align="right">0.07</td>
+<td align="right">47</td>
+<td align="right">3.17</td>
+</tr>
+<tr>
+<td align="right">256</td>
+<td>IPGP</td>
+<td align="right">0.53</td>
+<td align="right">-0.87</td>
+<td align="right">43</td>
+<td align="right">-37.24</td>
+</tr>
+<tr>
+<td align="right">257</td>
+<td>IQV</td>
+<td align="right">0.56</td>
+<td align="right">-1.4</td>
+<td align="right">39</td>
+<td align="right">-54.53</td>
+</tr>
+<tr>
+<td align="right">258</td>
+<td>IRM</td>
+<td align="right">0.68</td>
+<td align="right">0.25</td>
+<td align="right">40</td>
+<td align="right">9.97</td>
+</tr>
+<tr>
+<td align="right">259</td>
+<td>JKHY</td>
+<td align="right">0.64</td>
+<td align="right">1.33</td>
+<td align="right">45</td>
+<td align="right">59.69</td>
+</tr>
+<tr>
+<td align="right">260</td>
+<td>J</td>
+<td align="right">0.51</td>
+<td align="right">-0.59</td>
+<td align="right">43</td>
+<td align="right">-25.28</td>
+</tr>
+<tr>
+<td align="right">261</td>
+<td>JBHT</td>
+<td align="right">0.51</td>
+<td align="right">-0.73</td>
+<td align="right">47</td>
+<td align="right">-34.13</td>
+</tr>
+<tr>
+<td align="right">262</td>
+<td>SJM</td>
+<td align="right">0.51</td>
+<td align="right">-0.66</td>
+<td align="right">45</td>
+<td align="right">-29.7</td>
+</tr>
+<tr>
+<td align="right">263</td>
+<td>JNJ</td>
+<td align="right">0.55</td>
+<td align="right">-0.17</td>
+<td align="right">53</td>
+<td align="right">-9.24</td>
+</tr>
+<tr>
+<td align="right">264</td>
+<td>JCI</td>
+<td align="right">0.53</td>
+<td align="right">-0.25</td>
+<td align="right">45</td>
+<td align="right">-11.41</td>
+</tr>
+<tr>
+<td align="right">265</td>
+<td>JPM</td>
+<td align="right">0.63</td>
+<td align="right">-0.76</td>
+<td align="right">49</td>
+<td align="right">-37.36</td>
+</tr>
+<tr>
+<td align="right">266</td>
+<td>JNPR</td>
+<td align="right">0.33</td>
+<td align="right">-0.48</td>
+<td align="right">42</td>
+<td align="right">-20.27</td>
+</tr>
+<tr>
+<td align="right">267</td>
+<td>KSU</td>
+<td align="right">0.54</td>
+<td align="right">-2.16</td>
+<td align="right">37</td>
+<td align="right">-79.91</td>
+</tr>
+<tr>
+<td align="right">268</td>
+<td>K</td>
+<td align="right">0.68</td>
+<td align="right">0.28</td>
+<td align="right">38</td>
+<td align="right">10.58</td>
+</tr>
+<tr>
+<td align="right">269</td>
+<td>KEY</td>
+<td align="right">0.39</td>
+<td align="right">-0.47</td>
+<td align="right">46</td>
+<td align="right">-21.5</td>
+</tr>
+<tr>
+<td align="right">270</td>
+<td>KEYS</td>
+<td align="right">0.51</td>
+<td align="right">-0.55</td>
+<td align="right">45</td>
+<td align="right">-24.68</td>
+</tr>
+<tr>
+<td align="right">271</td>
+<td>KMB</td>
+<td align="right">0.54</td>
+<td align="right">-0.65</td>
+<td align="right">46</td>
+<td align="right">-30.06</td>
+</tr>
+<tr>
+<td align="right">272</td>
+<td>KIM</td>
+<td align="right">0.6</td>
+<td align="right">-0.02</td>
+<td align="right">40</td>
+<td align="right">-0.79</td>
+</tr>
+<tr>
+<td align="right">273</td>
+<td>KMI</td>
+<td align="right">0.61</td>
+<td align="right">-0.08</td>
+<td align="right">44</td>
+<td align="right">-3.42</td>
+</tr>
+<tr>
+<td align="right">274</td>
+<td>KLAC</td>
+<td align="right">0.5</td>
+<td align="right">-0.86</td>
+<td align="right">46</td>
+<td align="right">-39.37</td>
+</tr>
+<tr>
+<td align="right">275</td>
+<td>KHC</td>
+<td align="right">0.43</td>
+<td align="right">-0.23</td>
+<td align="right">47</td>
+<td align="right">-10.82</td>
+</tr>
+<tr>
+<td align="right">276</td>
+<td>KR</td>
+<td align="right">0.6</td>
+<td align="right">-0.04</td>
+<td align="right">45</td>
+<td align="right">-1.99</td>
+</tr>
+<tr>
+<td align="right">277</td>
+<td>LB</td>
+<td align="right">0.57</td>
+<td align="right">-0.22</td>
+<td align="right">40</td>
+<td align="right">-8.93</td>
+</tr>
+<tr>
+<td align="right">278</td>
+<td>LHX</td>
+<td align="right">0.64</td>
+<td align="right">0.53</td>
+<td align="right">42</td>
+<td align="right">22.28</td>
+</tr>
+<tr>
+<td align="right">279</td>
+<td>LH</td>
+<td align="right">0.47</td>
+<td align="right">-0.87</td>
+<td align="right">43</td>
+<td align="right">-37.31</td>
+</tr>
+<tr>
+<td align="right">280</td>
+<td>LRCX</td>
+<td align="right">0.46</td>
+<td align="right">-4.24</td>
+<td align="right">41</td>
+<td align="right">-173.73</td>
+</tr>
+<tr>
+<td align="right">281</td>
+<td>LW</td>
+<td align="right">0.67</td>
+<td align="right">-0.23</td>
+<td align="right">45</td>
+<td align="right">-10.54</td>
+</tr>
+<tr>
+<td align="right">282</td>
+<td>LVS</td>
+<td align="right">0.64</td>
+<td align="right">-0.11</td>
+<td align="right">42</td>
+<td align="right">-4.74</td>
+</tr>
+<tr>
+<td align="right">283</td>
+<td>LEG</td>
+<td align="right">0.5</td>
+<td align="right">-0.37</td>
+<td align="right">50</td>
+<td align="right">-18.73</td>
+</tr>
+<tr>
+<td align="right">284</td>
+<td>LDOS</td>
+<td align="right">0.53</td>
+<td align="right">-0.7</td>
+<td align="right">43</td>
+<td align="right">-29.91</td>
+</tr>
+<tr>
+<td align="right">285</td>
+<td>LEN</td>
+<td align="right">0.43</td>
+<td align="right">-0.97</td>
+<td align="right">42</td>
+<td align="right">-40.65</td>
+</tr>
+<tr>
+<td align="right">286</td>
+<td>LLY</td>
+<td align="right">0.57</td>
+<td align="right">-0.58</td>
+<td align="right">40</td>
+<td align="right">-23.25</td>
+</tr>
+<tr>
+<td align="right">287</td>
+<td>LNC</td>
+<td align="right">0.67</td>
+<td align="right">0.27</td>
+<td align="right">46</td>
+<td align="right">12.28</td>
+</tr>
+<tr>
+<td align="right">288</td>
+<td>LIN</td>
+<td align="right">0.6</td>
+<td align="right">-1.63</td>
+<td align="right">43</td>
+<td align="right">-70.2</td>
+</tr>
+<tr>
+<td align="right">289</td>
+<td>LYV</td>
+<td align="right">0.51</td>
+<td align="right">-0.53</td>
+<td align="right">41</td>
+<td align="right">-21.81</td>
+</tr>
+<tr>
+<td align="right">290</td>
+<td>LKQ</td>
+<td align="right">0.51</td>
+<td align="right">-0.66</td>
+<td align="right">43</td>
+<td align="right">-28.32</td>
+</tr>
+<tr>
+<td align="right">291</td>
+<td>LMT</td>
+<td align="right">0.76</td>
+<td align="right">2.6</td>
+<td align="right">45</td>
+<td align="right">116.79</td>
+</tr>
+<tr>
+<td align="right">292</td>
+<td>L</td>
+<td align="right">0.62</td>
+<td align="right">0.19</td>
+<td align="right">40</td>
+<td align="right">7.56</td>
+</tr>
+<tr>
+<td align="right">293</td>
+<td>LOW</td>
+<td align="right">0.59</td>
+<td align="right">0.85</td>
+<td align="right">37</td>
+<td align="right">31.34</td>
+</tr>
+<tr>
+<td align="right">294</td>
+<td>LUMN</td>
+<td align="right">0.53</td>
+<td align="right">-0.2</td>
+<td align="right">40</td>
+<td align="right">-7.82</td>
+</tr>
+<tr>
+<td align="right">295</td>
+<td>LYB</td>
+<td align="right">0.51</td>
+<td align="right">-1.43</td>
+<td align="right">39</td>
+<td align="right">-55.7</td>
+</tr>
+<tr>
+<td align="right">296</td>
+<td>MTB</td>
+<td align="right">0.58</td>
+<td align="right">-0.85</td>
+<td align="right">48</td>
+<td align="right">-40.76</td>
+</tr>
+<tr>
+<td align="right">297</td>
+<td>MRO</td>
+<td align="right">0.66</td>
+<td align="right">-0.04</td>
+<td align="right">47</td>
+<td align="right">-1.67</td>
+</tr>
+<tr>
+<td align="right">298</td>
+<td>MPC</td>
+<td align="right">0.53</td>
+<td align="right">-0.66</td>
+<td align="right">40</td>
+<td align="right">-26.55</td>
+</tr>
+<tr>
+<td align="right">299</td>
+<td>MKTX</td>
+<td align="right">0.62</td>
+<td align="right">0.87</td>
+<td align="right">45</td>
+<td align="right">39.0</td>
+</tr>
+<tr>
+<td align="right">300</td>
+<td>MAR</td>
+<td align="right">0.63</td>
+<td align="right">-0.37</td>
+<td align="right">46</td>
+<td align="right">-17.03</td>
+</tr>
+<tr>
+<td align="right">301</td>
+<td>MMC</td>
+<td align="right">0.5</td>
+<td align="right">-0.54</td>
+<td align="right">42</td>
+<td align="right">-22.83</td>
+</tr>
+<tr>
+<td align="right">302</td>
+<td>MLM</td>
+<td align="right">0.58</td>
+<td align="right">-0.99</td>
+<td align="right">43</td>
+<td align="right">-42.77</td>
+</tr>
+<tr>
+<td align="right">303</td>
+<td>MAS</td>
+<td align="right">0.69</td>
+<td align="right">0.36</td>
+<td align="right">42</td>
+<td align="right">14.94</td>
+</tr>
+<tr>
+<td align="right">304</td>
+<td>MA</td>
+<td align="right">0.66</td>
+<td align="right">0.46</td>
+<td align="right">41</td>
+<td align="right">18.96</td>
+</tr>
+<tr>
+<td align="right">305</td>
+<td>MKC</td>
+<td align="right">0.47</td>
+<td align="right">-0.34</td>
+<td align="right">49</td>
+<td align="right">-16.71</td>
+</tr>
+<tr>
+<td align="right">306</td>
+<td>MXIM</td>
+<td align="right">0.52</td>
+<td align="right">-0.52</td>
+<td align="right">44</td>
+<td align="right">-23.07</td>
+</tr>
+<tr>
+<td align="right">307</td>
+<td>MCD</td>
+<td align="right">0.55</td>
+<td align="right">-0.45</td>
+<td align="right">40</td>
+<td align="right">-17.87</td>
+</tr>
+<tr>
+<td align="right">308</td>
+<td>MCK</td>
+<td align="right">0.56</td>
+<td align="right">-0.94</td>
+<td align="right">39</td>
+<td align="right">-36.8</td>
+</tr>
+<tr>
+<td align="right">309</td>
+<td>MDT</td>
+<td align="right">0.44</td>
+<td align="right">-1.14</td>
+<td align="right">45</td>
+<td align="right">-51.49</td>
+</tr>
+<tr>
+<td align="right">310</td>
+<td>MRK</td>
+<td align="right">0.59</td>
+<td align="right">-0.05</td>
+<td align="right">44</td>
+<td align="right">-2.23</td>
+</tr>
+<tr>
+<td align="right">311</td>
+<td>MET</td>
+<td align="right">0.59</td>
+<td align="right">-0.2</td>
+<td align="right">41</td>
+<td align="right">-8.32</td>
+</tr>
+<tr>
+<td align="right">312</td>
+<td>MTD</td>
+<td align="right">0.58</td>
+<td align="right">-1.69</td>
+<td align="right">36</td>
+<td align="right">-60.72</td>
+</tr>
+<tr>
+<td align="right">313</td>
+<td>MGM</td>
+<td align="right">0.63</td>
+<td align="right">0.13</td>
+<td align="right">41</td>
+<td align="right">5.24</td>
+</tr>
+<tr>
+<td align="right">314</td>
+<td>MCHP</td>
+<td align="right">0.52</td>
+<td align="right">-1.54</td>
+<td align="right">42</td>
+<td align="right">-64.88</td>
+</tr>
+<tr>
+<td align="right">315</td>
+<td>MU</td>
+<td align="right">0.5</td>
+<td align="right">-0.81</td>
+<td align="right">38</td>
+<td align="right">-30.81</td>
+</tr>
+<tr>
+<td align="right">316</td>
+<td>MSFT</td>
+<td align="right">0.53</td>
+<td align="right">-1.82</td>
+<td align="right">49</td>
+<td align="right">-89.37</td>
+</tr>
+<tr>
+<td align="right">317</td>
+<td>MAA</td>
+<td align="right">0.52</td>
+<td align="right">-0.42</td>
+<td align="right">42</td>
+<td align="right">-17.55</td>
+</tr>
+<tr>
+<td align="right">318</td>
+<td>MHK</td>
+<td align="right">0.62</td>
+<td align="right">-0.05</td>
+<td align="right">29</td>
+<td align="right">-1.5</td>
+</tr>
+<tr>
+<td align="right">319</td>
+<td>TAP</td>
+<td align="right">0.74</td>
+<td align="right">0.43</td>
+<td align="right">35</td>
+<td align="right">15.13</td>
+</tr>
+<tr>
+<td align="right">320</td>
+<td>MDLZ</td>
+<td align="right">0.58</td>
+<td align="right">0.2</td>
+<td align="right">43</td>
+<td align="right">8.79</td>
+</tr>
+<tr>
+<td align="right">321</td>
+<td>MPWR</td>
+<td align="right">0.45</td>
+<td align="right">-4.95</td>
+<td align="right">40</td>
+<td align="right">-198.06</td>
+</tr>
+<tr>
+<td align="right">322</td>
+<td>MNST</td>
+<td align="right">0.5</td>
+<td align="right">-0.63</td>
+<td align="right">34</td>
+<td align="right">-21.41</td>
+</tr>
+<tr>
+<td align="right">323</td>
+<td>MCO</td>
+<td align="right">0.6</td>
+<td align="right">0.29</td>
+<td align="right">47</td>
+<td align="right">13.84</td>
+</tr>
+<tr>
+<td align="right">324</td>
+<td>MS</td>
+<td align="right">0.51</td>
+<td align="right">-0.37</td>
+<td align="right">43</td>
+<td align="right">-15.97</td>
+</tr>
+<tr>
+<td align="right">325</td>
+<td>MOS</td>
+<td align="right">0.51</td>
+<td align="right">-0.38</td>
+<td align="right">51</td>
+<td align="right">-19.58</td>
+</tr>
+<tr>
+<td align="right">326</td>
+<td>MSI</td>
+<td align="right">0.64</td>
+<td align="right">0.18</td>
+<td align="right">47</td>
+<td align="right">8.65</td>
+</tr>
+<tr>
+<td align="right">327</td>
+<td>MSCI</td>
+<td align="right">0.43</td>
+<td align="right">-6.89</td>
+<td align="right">44</td>
+<td align="right">-302.97</td>
+</tr>
+<tr>
+<td align="right">328</td>
+<td>NDAQ</td>
+<td align="right">0.48</td>
+<td align="right">-0.48</td>
+<td align="right">31</td>
+<td align="right">-14.83</td>
+</tr>
+<tr>
+<td align="right">329</td>
+<td>NTAP</td>
+<td align="right">0.62</td>
+<td align="right">0.04</td>
+<td align="right">47</td>
+<td align="right">1.96</td>
+</tr>
+<tr>
+<td align="right">330</td>
+<td>NFLX</td>
+<td align="right">0.5</td>
+<td align="right">-5.98</td>
+<td align="right">42</td>
+<td align="right">-251.32</td>
+</tr>
+<tr>
+<td align="right">331</td>
+<td>NWL</td>
+<td align="right">0.57</td>
+<td align="right">0.03</td>
+<td align="right">40</td>
+<td align="right">1.15</td>
+</tr>
+<tr>
+<td align="right">332</td>
+<td>NEM</td>
+<td align="right">0.62</td>
+<td align="right">-0.08</td>
+<td align="right">42</td>
+<td align="right">-3.25</td>
+</tr>
+<tr>
+<td align="right">333</td>
+<td>NWSA</td>
+<td align="right">0.65</td>
+<td align="right">-0.05</td>
+<td align="right">43</td>
+<td align="right">-1.97</td>
+</tr>
+<tr>
+<td align="right">334</td>
+<td>NWS</td>
+<td align="right">0.66</td>
+<td align="right">0.09</td>
+<td align="right">41</td>
+<td align="right">3.69</td>
+</tr>
+<tr>
+<td align="right">335</td>
+<td>NEE</td>
+<td align="right">0.54</td>
+<td align="right">-0.29</td>
+<td align="right">48</td>
+<td align="right">-13.95</td>
+</tr>
+<tr>
+<td align="right">336</td>
+<td>NLSN</td>
+<td align="right">0.73</td>
+<td align="right">0.11</td>
+<td align="right">37</td>
+<td align="right">4.16</td>
+</tr>
+<tr>
+<td align="right">337</td>
+<td>NKE</td>
+<td align="right">0.51</td>
+<td align="right">-0.68</td>
+<td align="right">41</td>
+<td align="right">-27.97</td>
+</tr>
+<tr>
+<td align="right">338</td>
+<td>NI</td>
+<td align="right">0.58</td>
+<td align="right">-0.02</td>
+<td align="right">45</td>
+<td align="right">-0.93</td>
+</tr>
+<tr>
+<td align="right">339</td>
+<td>NSC</td>
+<td align="right">0.64</td>
+<td align="right">-0.84</td>
+<td align="right">36</td>
+<td align="right">-30.09</td>
+</tr>
+<tr>
+<td align="right">340</td>
+<td>NTRS</td>
+<td align="right">0.52</td>
+<td align="right">-0.86</td>
+<td align="right">48</td>
+<td align="right">-41.09</td>
+</tr>
+<tr>
+<td align="right">341</td>
+<td>NOC</td>
+<td align="right">0.69</td>
+<td align="right">0.62</td>
+<td align="right">49</td>
+<td align="right">30.32</td>
+</tr>
+<tr>
+<td align="right">342</td>
+<td>NLOK</td>
+<td align="right">0.49</td>
+<td align="right">-0.3</td>
+<td align="right">45</td>
+<td align="right">-13.68</td>
+</tr>
+<tr>
+<td align="right">343</td>
+<td>NCLH</td>
+<td align="right">0.63</td>
+<td align="right">-0.1</td>
+<td align="right">38</td>
+<td align="right">-3.73</td>
+</tr>
+<tr>
+<td align="right">344</td>
+<td>NOV</td>
+<td align="right">0.5</td>
+<td align="right">-0.27</td>
+<td align="right">40</td>
+<td align="right">-10.72</td>
+</tr>
+<tr>
+<td align="right">345</td>
+<td>NRG</td>
+<td align="right">0.5</td>
+<td align="right">-0.39</td>
+<td align="right">42</td>
+<td align="right">-16.48</td>
+</tr>
+<tr>
+<td align="right">346</td>
+<td>NUE</td>
+<td align="right">0.44</td>
+<td align="right">-0.66</td>
+<td align="right">36</td>
+<td align="right">-23.67</td>
+</tr>
+<tr>
+<td align="right">347</td>
+<td>NVDA</td>
+<td align="right">0.4</td>
+<td align="right">-9.51</td>
+<td align="right">35</td>
+<td align="right">-332.91</td>
+</tr>
+<tr>
+<td align="right">348</td>
+<td>NVR</td>
+<td align="right">0.56</td>
+<td align="right">-24.94</td>
+<td align="right">43</td>
+<td align="right">-1072.53</td>
+</tr>
+<tr>
+<td align="right">349</td>
+<td>ORLY</td>
+<td align="right">0.69</td>
+<td align="right">0.61</td>
+<td align="right">32</td>
+<td align="right">19.67</td>
+</tr>
+<tr>
+<td align="right">350</td>
+<td>OXY</td>
+<td align="right">0.69</td>
+<td align="right">0.08</td>
+<td align="right">42</td>
+<td align="right">3.29</td>
+</tr>
+<tr>
+<td align="right">351</td>
+<td>ODFL</td>
+<td align="right">0.46</td>
+<td align="right">-2.36</td>
+<td align="right">41</td>
+<td align="right">-96.64</td>
+</tr>
+<tr>
+<td align="right">352</td>
+<td>OMC</td>
+<td align="right">0.66</td>
+<td align="right">0.18</td>
+<td align="right">47</td>
+<td align="right">8.5</td>
+</tr>
+<tr>
+<td align="right">353</td>
+<td>OKE</td>
+<td align="right">0.51</td>
+<td align="right">-0.37</td>
+<td align="right">43</td>
+<td align="right">-15.71</td>
+</tr>
+<tr>
+<td align="right">354</td>
+<td>ORCL</td>
+<td align="right">0.72</td>
+<td align="right">0.19</td>
+<td align="right">39</td>
+<td align="right">7.25</td>
+</tr>
+<tr>
+<td align="right">355</td>
+<td>OTIS</td>
+<td align="right">0.55</td>
+<td align="right">-0.4</td>
+<td align="right">49</td>
+<td align="right">-19.5</td>
+</tr>
+<tr>
+<td align="right">356</td>
+<td>PCAR</td>
+<td align="right">0.5</td>
+<td align="right">-0.39</td>
+<td align="right">38</td>
+<td align="right">-14.74</td>
+</tr>
+<tr>
+<td align="right">357</td>
+<td>PKG</td>
+<td align="right">0.61</td>
+<td align="right">-0.34</td>
+<td align="right">46</td>
+<td align="right">-15.63</td>
+</tr>
+<tr>
+<td align="right">358</td>
+<td>PH</td>
+<td align="right">0.58</td>
+<td align="right">-1.79</td>
+<td align="right">45</td>
+<td align="right">-80.62</td>
+</tr>
+<tr>
+<td align="right">359</td>
+<td>PAYX</td>
+<td align="right">0.54</td>
+<td align="right">-0.57</td>
+<td align="right">39</td>
+<td align="right">-22.21</td>
+</tr>
+<tr>
+<td align="right">360</td>
+<td>PAYC</td>
+<td align="right">0.51</td>
+<td align="right">-3.0</td>
+<td align="right">45</td>
+<td align="right">-135.09</td>
+</tr>
+<tr>
+<td align="right">361</td>
+<td>PYPL</td>
+<td align="right">0.42</td>
+<td align="right">-1.83</td>
+<td align="right">43</td>
+<td align="right">-78.57</td>
+</tr>
+<tr>
+<td align="right">362</td>
+<td>PNR</td>
+<td align="right">0.37</td>
+<td align="right">-0.79</td>
+<td align="right">46</td>
+<td align="right">-36.14</td>
+</tr>
+<tr>
+<td align="right">363</td>
+<td>PBCT</td>
+<td align="right">0.62</td>
+<td align="right">-0.14</td>
+<td align="right">40</td>
+<td align="right">-5.47</td>
+</tr>
+<tr>
+<td align="right">364</td>
+<td>PEP</td>
+<td align="right">0.48</td>
+<td align="right">-0.66</td>
+<td align="right">52</td>
+<td align="right">-34.12</td>
+</tr>
+<tr>
+<td align="right">365</td>
+<td>PKI</td>
+<td align="right">0.45</td>
+<td align="right">-1.8</td>
+<td align="right">33</td>
+<td align="right">-59.55</td>
+</tr>
+<tr>
+<td align="right">366</td>
+<td>PRGO</td>
+<td align="right">0.56</td>
+<td align="right">-0.11</td>
+<td align="right">45</td>
+<td align="right">-4.89</td>
+</tr>
+<tr>
+<td align="right">367</td>
+<td>PFE</td>
+<td align="right">0.5</td>
+<td align="right">-0.23</td>
+<td align="right">44</td>
+<td align="right">-10.14</td>
+</tr>
+<tr>
+<td align="right">368</td>
+<td>PM</td>
+<td align="right">0.53</td>
+<td align="right">-0.13</td>
+<td align="right">47</td>
+<td align="right">-6.31</td>
+</tr>
+<tr>
+<td align="right">369</td>
+<td>PSX</td>
+<td align="right">0.54</td>
+<td align="right">-1.38</td>
+<td align="right">37</td>
+<td align="right">-50.91</td>
+</tr>
+<tr>
+<td align="right">370</td>
+<td>PNW</td>
+<td align="right">0.76</td>
+<td align="right">0.78</td>
+<td align="right">45</td>
+<td align="right">35.19</td>
+</tr>
+<tr>
+<td align="right">371</td>
+<td>PXD</td>
+<td align="right">0.6</td>
+<td align="right">-0.7</td>
+<td align="right">47</td>
+<td align="right">-33.11</td>
+</tr>
+<tr>
+<td align="right">372</td>
+<td>PNC</td>
+<td align="right">0.39</td>
+<td align="right">-2.09</td>
+<td align="right">36</td>
+<td align="right">-75.09</td>
+</tr>
+<tr>
+<td align="right">373</td>
+<td>POOL</td>
+<td align="right">0.46</td>
+<td align="right">-3.07</td>
+<td align="right">39</td>
+<td align="right">-119.58</td>
+</tr>
+<tr>
+<td align="right">374</td>
+<td>PPG</td>
+<td align="right">0.55</td>
+<td align="right">-0.42</td>
+<td align="right">42</td>
+<td align="right">-17.73</td>
+</tr>
+<tr>
+<td align="right">375</td>
+<td>PPL</td>
+<td align="right">0.61</td>
+<td align="right">-0.14</td>
+<td align="right">44</td>
+<td align="right">-6.29</td>
+</tr>
+<tr>
+<td align="right">376</td>
+<td>PFG</td>
+<td align="right">0.58</td>
+<td align="right">-0.07</td>
+<td align="right">43</td>
+<td align="right">-2.84</td>
+</tr>
+<tr>
+<td align="right">377</td>
+<td>PG</td>
+<td align="right">0.54</td>
+<td align="right">-0.08</td>
+<td align="right">46</td>
+<td align="right">-3.86</td>
+</tr>
+<tr>
+<td align="right">378</td>
+<td>PGR</td>
+<td align="right">0.6</td>
+<td align="right">-0.13</td>
+<td align="right">43</td>
+<td align="right">-5.58</td>
+</tr>
+<tr>
+<td align="right">379</td>
+<td>PLD</td>
+<td align="right">0.62</td>
+<td align="right">0.34</td>
+<td align="right">50</td>
+<td align="right">17.12</td>
+</tr>
+<tr>
+<td align="right">380</td>
+<td>PRU</td>
+<td align="right">0.51</td>
+<td align="right">-0.5</td>
+<td align="right">53</td>
+<td align="right">-26.61</td>
+</tr>
+<tr>
+<td align="right">381</td>
+<td>PEG</td>
+<td align="right">0.58</td>
+<td align="right">0.01</td>
+<td align="right">43</td>
+<td align="right">0.4</td>
+</tr>
+<tr>
+<td align="right">382</td>
+<td>PSA</td>
+<td align="right">0.56</td>
+<td align="right">-0.37</td>
+<td align="right">36</td>
+<td align="right">-13.27</td>
+</tr>
+<tr>
+<td align="right">383</td>
+<td>PHM</td>
+<td align="right">0.65</td>
+<td align="right">0.12</td>
+<td align="right">37</td>
+<td align="right">4.52</td>
+</tr>
+<tr>
+<td align="right">384</td>
+<td>PVH</td>
+<td align="right">0.69</td>
+<td align="right">0.22</td>
+<td align="right">36</td>
+<td align="right">8.05</td>
+</tr>
+<tr>
+<td align="right">385</td>
+<td>QRVO</td>
+<td align="right">0.48</td>
+<td align="right">-1.45</td>
+<td align="right">46</td>
+<td align="right">-66.49</td>
+</tr>
+<tr>
+<td align="right">386</td>
+<td>PWR</td>
+<td align="right">0.45</td>
+<td align="right">-0.92</td>
+<td align="right">38</td>
+<td align="right">-35.08</td>
+</tr>
+<tr>
+<td align="right">387</td>
+<td>QCOM</td>
+<td align="right">0.49</td>
+<td align="right">-0.75</td>
+<td align="right">43</td>
+<td align="right">-32.08</td>
+</tr>
+<tr>
+<td align="right">388</td>
+<td>DGX</td>
+<td align="right">0.44</td>
+<td align="right">-0.86</td>
+<td align="right">43</td>
+<td align="right">-37.12</td>
+</tr>
+<tr>
+<td align="right">389</td>
+<td>RL</td>
+<td align="right">0.59</td>
+<td align="right">-0.89</td>
+<td align="right">39</td>
+<td align="right">-34.55</td>
+</tr>
+<tr>
+<td align="right">390</td>
+<td>RJF</td>
+<td align="right">0.48</td>
+<td align="right">-1.04</td>
+<td align="right">48</td>
+<td align="right">-50.08</td>
+</tr>
+<tr>
+<td align="right">391</td>
+<td>RTX</td>
+<td align="right">0.7</td>
+<td align="right">-0.05</td>
+<td align="right">43</td>
+<td align="right">-2.21</td>
+</tr>
+<tr>
+<td align="right">392</td>
+<td>O</td>
+<td align="right">0.64</td>
+<td align="right">0.2</td>
+<td align="right">36</td>
+<td align="right">7.34</td>
+</tr>
+<tr>
+<td align="right">393</td>
+<td>REG</td>
+<td align="right">0.77</td>
+<td align="right">1.1</td>
+<td align="right">44</td>
+<td align="right">48.32</td>
+</tr>
+<tr>
+<td align="right">394</td>
+<td>REGN</td>
+<td align="right">0.66</td>
+<td align="right">-1.9</td>
+<td align="right">47</td>
+<td align="right">-89.26</td>
+</tr>
+<tr>
+<td align="right">395</td>
+<td>RF</td>
+<td align="right">0.5</td>
+<td align="right">-0.28</td>
+<td align="right">42</td>
+<td align="right">-11.83</td>
+</tr>
+<tr>
+<td align="right">396</td>
+<td>RSG</td>
+<td align="right">0.68</td>
+<td align="right">0.17</td>
+<td align="right">44</td>
+<td align="right">7.44</td>
+</tr>
+<tr>
+<td align="right">397</td>
+<td>RMD</td>
+<td align="right">0.6</td>
+<td align="right">0.04</td>
+<td align="right">47</td>
+<td align="right">1.79</td>
+</tr>
+<tr>
+<td align="right">398</td>
+<td>RHI</td>
+<td align="right">0.53</td>
+<td align="right">-0.95</td>
+<td align="right">38</td>
+<td align="right">-36.24</td>
+</tr>
+<tr>
+<td align="right">399</td>
+<td>ROK</td>
+<td align="right">0.53</td>
+<td align="right">0.26</td>
+<td align="right">45</td>
+<td align="right">11.65</td>
+</tr>
+<tr>
+<td align="right">400</td>
+<td>ROL</td>
+<td align="right">0.5</td>
+<td align="right">-0.4</td>
+<td align="right">38</td>
+<td align="right">-15.26</td>
+</tr>
+<tr>
+<td align="right">401</td>
+<td>ROP</td>
+<td align="right">0.53</td>
+<td align="right">-0.57</td>
+<td align="right">45</td>
+<td align="right">-25.45</td>
+</tr>
+<tr>
+<td align="right">402</td>
+<td>ROST</td>
+<td align="right">0.51</td>
+<td align="right">-0.94</td>
+<td align="right">39</td>
+<td align="right">-36.85</td>
+</tr>
+<tr>
+<td align="right">403</td>
+<td>RCL</td>
+<td align="right">0.68</td>
+<td align="right">0.57</td>
+<td align="right">41</td>
+<td align="right">23.21</td>
+</tr>
+<tr>
+<td align="right">404</td>
+<td>SPGI</td>
+<td align="right">0.51</td>
+<td align="right">-1.14</td>
+<td align="right">41</td>
+<td align="right">-46.89</td>
+</tr>
+<tr>
+<td align="right">405</td>
+<td>CRM</td>
+<td align="right">0.46</td>
+<td align="right">-2.23</td>
+<td align="right">37</td>
+<td align="right">-82.36</td>
+</tr>
+<tr>
+<td align="right">406</td>
+<td>SBAC</td>
+<td align="right">0.8</td>
+<td align="right">2.01</td>
+<td align="right">44</td>
+<td align="right">88.66</td>
+</tr>
+<tr>
+<td align="right">407</td>
+<td>SLB</td>
+<td align="right">0.69</td>
+<td align="right">0.09</td>
+<td align="right">39</td>
+<td align="right">3.49</td>
+</tr>
+<tr>
+<td align="right">408</td>
+<td>STX</td>
+<td align="right">0.47</td>
+<td align="right">-0.58</td>
+<td align="right">43</td>
+<td align="right">-25.13</td>
+</tr>
+<tr>
+<td align="right">409</td>
+<td>SEE</td>
+<td align="right">0.6</td>
+<td align="right">-0.08</td>
+<td align="right">43</td>
+<td align="right">-3.4</td>
+</tr>
+<tr>
+<td align="right">410</td>
+<td>SRE</td>
+<td align="right">0.67</td>
+<td align="right">0.38</td>
+<td align="right">43</td>
+<td align="right">16.22</td>
+</tr>
+<tr>
+<td align="right">411</td>
+<td>NOW</td>
+<td align="right">0.35</td>
+<td align="right">-9.16</td>
+<td align="right">48</td>
+<td align="right">-439.82</td>
+</tr>
+<tr>
+<td align="right">412</td>
+<td>SHW</td>
+<td align="right">0.49</td>
+<td align="right">-4.49</td>
+<td align="right">45</td>
+<td align="right">-201.99</td>
+</tr>
+<tr>
+<td align="right">413</td>
+<td>SPG</td>
+<td align="right">0.73</td>
+<td align="right">0.51</td>
+<td align="right">37</td>
+<td align="right">18.69</td>
+</tr>
+<tr>
+<td align="right">414</td>
+<td>SWKS</td>
+<td align="right">0.52</td>
+<td align="right">-1.34</td>
+<td align="right">44</td>
+<td align="right">-58.94</td>
+</tr>
+<tr>
+<td align="right">415</td>
+<td>SLG</td>
+<td align="right">0.72</td>
+<td align="right">0.72</td>
+<td align="right">43</td>
+<td align="right">31.0</td>
+</tr>
+<tr>
+<td align="right">416</td>
+<td>SNA</td>
+<td align="right">0.61</td>
+<td align="right">0.33</td>
+<td align="right">41</td>
+<td align="right">13.4</td>
+</tr>
+<tr>
+<td align="right">417</td>
+<td>SO</td>
+<td align="right">0.49</td>
+<td align="right">-0.13</td>
+<td align="right">41</td>
+<td align="right">-5.35</td>
+</tr>
+<tr>
+<td align="right">418</td>
+<td>LUV</td>
+<td align="right">0.55</td>
+<td align="right">-0.07</td>
+<td align="right">44</td>
+<td align="right">-3.14</td>
+</tr>
+<tr>
+<td align="right">419</td>
+<td>SWK</td>
+<td align="right">0.52</td>
+<td align="right">-0.81</td>
+<td align="right">48</td>
+<td align="right">-39.01</td>
+</tr>
+<tr>
+<td align="right">420</td>
+<td>SBUX</td>
+<td align="right">0.38</td>
+<td align="right">-1.39</td>
+<td align="right">47</td>
+<td align="right">-65.39</td>
+</tr>
+<tr>
+<td align="right">421</td>
+<td>STT</td>
+<td align="right">0.57</td>
+<td align="right">-0.69</td>
+<td align="right">46</td>
+<td align="right">-31.96</td>
+</tr>
+<tr>
+<td align="right">422</td>
+<td>STE</td>
+<td align="right">0.62</td>
+<td align="right">0.38</td>
+<td align="right">50</td>
+<td align="right">18.77</td>
+</tr>
+<tr>
+<td align="right">423</td>
+<td>SYK</td>
+<td align="right">0.49</td>
+<td align="right">-3.07</td>
+<td align="right">37</td>
+<td align="right">-113.44</td>
+</tr>
+<tr>
+<td align="right">424</td>
+<td>SIVB</td>
+<td align="right">0.5</td>
+<td align="right">-2.8</td>
+<td align="right">44</td>
+<td align="right">-123.14</td>
+</tr>
+<tr>
+<td align="right">425</td>
+<td>SYF</td>
+<td align="right">0.61</td>
+<td align="right">-0.1</td>
+<td align="right">38</td>
+<td align="right">-3.72</td>
+</tr>
+<tr>
+<td align="right">426</td>
+<td>SNPS</td>
+<td align="right">0.46</td>
+<td align="right">-2.48</td>
+<td align="right">39</td>
+<td align="right">-96.73</td>
+</tr>
+<tr>
+<td align="right">427</td>
+<td>SYY</td>
+<td align="right">0.47</td>
+<td align="right">-1.39</td>
+<td align="right">45</td>
+<td align="right">-62.55</td>
+</tr>
+<tr>
+<td align="right">428</td>
+<td>TMUS</td>
+<td align="right">0.45</td>
+<td align="right">-1.18</td>
+<td align="right">47</td>
+<td align="right">-55.64</td>
+</tr>
+<tr>
+<td align="right">429</td>
+<td>TROW</td>
+<td align="right">0.47</td>
+<td align="right">-1.17</td>
+<td align="right">36</td>
+<td align="right">-42.19</td>
+</tr>
+<tr>
+<td align="right">430</td>
+<td>TTWO</td>
+<td align="right">0.53</td>
+<td align="right">-0.55</td>
+<td align="right">38</td>
+<td align="right">-21.05</td>
+</tr>
+<tr>
+<td align="right">431</td>
+<td>TPR</td>
+<td align="right">0.62</td>
+<td align="right">-0.01</td>
+<td align="right">45</td>
+<td align="right">-0.27</td>
+</tr>
+<tr>
+<td align="right">432</td>
+<td>TGT</td>
+<td align="right">0.5</td>
+<td align="right">-0.91</td>
+<td align="right">38</td>
+<td align="right">-34.55</td>
+</tr>
+<tr>
+<td align="right">433</td>
+<td>TEL</td>
+<td align="right">0.59</td>
+<td align="right">-0.08</td>
+<td align="right">37</td>
+<td align="right">-3.13</td>
+</tr>
+<tr>
+<td align="right">434</td>
+<td>TDY</td>
+<td align="right">0.6</td>
+<td align="right">0.2</td>
+<td align="right">45</td>
+<td align="right">9.07</td>
+</tr>
+<tr>
+<td align="right">435</td>
+<td>TFX</td>
+<td align="right">0.29</td>
+<td align="right">-8.24</td>
+<td align="right">41</td>
+<td align="right">-337.93</td>
+</tr>
+<tr>
+<td align="right">436</td>
+<td>TER</td>
+<td align="right">0.38</td>
+<td align="right">-1.58</td>
+<td align="right">39</td>
+<td align="right">-61.8</td>
+</tr>
+<tr>
+<td align="right">437</td>
+<td>TSLA</td>
+<td align="right">0.49</td>
+<td align="right">-4.95</td>
+<td align="right">35</td>
+<td align="right">-173.14</td>
+</tr>
+<tr>
+<td align="right">438</td>
+<td>TXN</td>
+<td align="right">0.39</td>
+<td align="right">-2.6</td>
+<td align="right">38</td>
+<td align="right">-98.78</td>
+</tr>
+<tr>
+<td align="right">439</td>
+<td>TXT</td>
+<td align="right">0.55</td>
+<td align="right">-0.09</td>
+<td align="right">42</td>
+<td align="right">-3.93</td>
+</tr>
+<tr>
+<td align="right">440</td>
+<td>TMO</td>
+<td align="right">0.45</td>
+<td align="right">-2.5</td>
+<td align="right">40</td>
+<td align="right">-99.93</td>
+</tr>
+<tr>
+<td align="right">441</td>
+<td>TJX</td>
+<td align="right">0.61</td>
+<td align="right">-0.08</td>
+<td align="right">51</td>
+<td align="right">-4.03</td>
+</tr>
+<tr>
+<td align="right">442</td>
+<td>TSCO</td>
+<td align="right">0.54</td>
+<td align="right">-0.89</td>
+<td align="right">37</td>
+<td align="right">-32.93</td>
+</tr>
+<tr>
+<td align="right">443</td>
+<td>TT</td>
+<td align="right">0.71</td>
+<td align="right">0.71</td>
+<td align="right">38</td>
+<td align="right">27.02</td>
+</tr>
+<tr>
+<td align="right">444</td>
+<td>TDG</td>
+<td align="right">0.65</td>
+<td align="right">3.27</td>
+<td align="right">37</td>
+<td align="right">120.94</td>
+</tr>
+<tr>
+<td align="right">445</td>
+<td>TRV</td>
+<td align="right">0.6</td>
+<td align="right">0.1</td>
+<td align="right">42</td>
+<td align="right">4.25</td>
+</tr>
+<tr>
+<td align="right">446</td>
+<td>TRMB</td>
+<td align="right">0.5</td>
+<td align="right">-0.45</td>
+<td align="right">42</td>
+<td align="right">-18.92</td>
+</tr>
+<tr>
+<td align="right">447</td>
+<td>TFC</td>
+<td align="right">0.5</td>
+<td align="right">-0.4</td>
+<td align="right">46</td>
+<td align="right">-18.47</td>
+</tr>
+<tr>
+<td align="right">448</td>
+<td>TWTR</td>
+<td align="right">0.43</td>
+<td align="right">-0.55</td>
+<td align="right">49</td>
+<td align="right">-27.05</td>
+</tr>
+<tr>
+<td align="right">449</td>
+<td>TYL</td>
+<td align="right">0.4</td>
+<td align="right">-6.32</td>
+<td align="right">48</td>
+<td align="right">-303.33</td>
+</tr>
+<tr>
+<td align="right">450</td>
+<td>TSN</td>
+<td align="right">0.55</td>
+<td align="right">-0.28</td>
+<td align="right">38</td>
+<td align="right">-10.58</td>
+</tr>
+<tr>
+<td align="right">451</td>
+<td>UDR</td>
+<td align="right">0.57</td>
+<td align="right">-0.04</td>
+<td align="right">37</td>
+<td align="right">-1.46</td>
+</tr>
+<tr>
+<td align="right">452</td>
+<td>ULTA</td>
+<td align="right">0.59</td>
+<td align="right">-0.96</td>
+<td align="right">46</td>
+<td align="right">-44.17</td>
+</tr>
+<tr>
+<td align="right">453</td>
+<td>USB</td>
+<td align="right">0.51</td>
+<td align="right">-0.49</td>
+<td align="right">45</td>
+<td align="right">-21.87</td>
+</tr>
+<tr>
+<td align="right">454</td>
+<td>UAA</td>
+<td align="right">0.58</td>
+<td align="right">-0.13</td>
+<td align="right">45</td>
+<td align="right">-5.96</td>
+</tr>
+<tr>
+<td align="right">455</td>
+<td>UA</td>
+<td align="right">0.5</td>
+<td align="right">-0.21</td>
+<td align="right">46</td>
+<td align="right">-9.77</td>
+</tr>
+<tr>
+<td align="right">456</td>
+<td>UNP</td>
+<td align="right">0.59</td>
+<td align="right">-0.96</td>
+<td align="right">46</td>
+<td align="right">-44.13</td>
+</tr>
+<tr>
+<td align="right">457</td>
+<td>UAL</td>
+<td align="right">0.62</td>
+<td align="right">-0.04</td>
+<td align="right">40</td>
+<td align="right">-1.73</td>
+</tr>
+<tr>
+<td align="right">458</td>
+<td>UNH</td>
+<td align="right">0.65</td>
+<td align="right">1.23</td>
+<td align="right">49</td>
+<td align="right">60.49</td>
+</tr>
+<tr>
+<td align="right">459</td>
+<td>UPS</td>
+<td align="right">0.4</td>
+<td align="right">-2.15</td>
+<td align="right">45</td>
+<td align="right">-96.53</td>
+</tr>
+<tr>
+<td align="right">460</td>
+<td>URI</td>
+<td align="right">0.56</td>
+<td align="right">-2.52</td>
+<td align="right">43</td>
+<td align="right">-108.33</td>
+</tr>
+<tr>
+<td align="right">461</td>
+<td>UHS</td>
+<td align="right">0.54</td>
+<td align="right">-0.65</td>
+<td align="right">50</td>
+<td align="right">-32.64</td>
+</tr>
+<tr>
+<td align="right">462</td>
+<td>UNM</td>
+<td align="right">0.53</td>
+<td align="right">-0.36</td>
+<td align="right">49</td>
+<td align="right">-17.69</td>
+</tr>
+<tr>
+<td align="right">463</td>
+<td>VLO</td>
+<td align="right">0.53</td>
+<td align="right">-0.97</td>
+<td align="right">43</td>
+<td align="right">-41.78</td>
+</tr>
+<tr>
+<td align="right">464</td>
+<td>VAR</td>
+<td align="right">0.56</td>
+<td align="right">0.0</td>
+<td align="right">39</td>
+<td align="right">0.05</td>
+</tr>
+<tr>
+<td align="right">465</td>
+<td>VTR</td>
+<td align="right">0.66</td>
+<td align="right">0.15</td>
+<td align="right">35</td>
+<td align="right">5.11</td>
+</tr>
+<tr>
+<td align="right">466</td>
+<td>VRSN</td>
+<td align="right">0.56</td>
+<td align="right">-0.44</td>
+<td align="right">50</td>
+<td align="right">-22.04</td>
+</tr>
+<tr>
+<td align="right">467</td>
+<td>VRSK</td>
+<td align="right">0.57</td>
+<td align="right">-0.39</td>
+<td align="right">37</td>
+<td align="right">-14.35</td>
+</tr>
+<tr>
+<td align="right">468</td>
+<td>VZ</td>
+<td align="right">0.55</td>
+<td align="right">-0.1</td>
+<td align="right">42</td>
+<td align="right">-4.21</td>
+</tr>
+<tr>
+<td align="right">469</td>
+<td>VRTX</td>
+<td align="right">0.44</td>
+<td align="right">-3.72</td>
+<td align="right">41</td>
+<td align="right">-152.6</td>
+</tr>
+<tr>
+<td align="right">470</td>
+<td>VFC</td>
+<td align="right">0.64</td>
+<td align="right">0.41</td>
+<td align="right">50</td>
+<td align="right">20.73</td>
+</tr>
+<tr>
+<td align="right">471</td>
+<td>VIAC</td>
+<td align="right">0.47</td>
+<td align="right">-0.77</td>
+<td align="right">32</td>
+<td align="right">-24.74</td>
+</tr>
+<tr>
+<td align="right">472</td>
+<td>VTRS</td>
+<td align="right">0.63</td>
+<td align="right">0.03</td>
+<td align="right">41</td>
+<td align="right">1.18</td>
+</tr>
+<tr>
+<td align="right">473</td>
+<td>V</td>
+<td align="right">0.57</td>
+<td align="right">-0.97</td>
+<td align="right">51</td>
+<td align="right">-49.23</td>
+</tr>
+<tr>
+<td align="right">474</td>
+<td>VNT</td>
+<td align="right">0.59</td>
+<td align="right">-0.17</td>
+<td align="right">17</td>
+<td align="right">-2.96</td>
+</tr>
+<tr>
+<td align="right">475</td>
+<td>VNO</td>
+<td align="right">0.79</td>
+<td align="right">0.52</td>
+<td align="right">34</td>
+<td align="right">17.69</td>
+</tr>
+<tr>
+<td align="right">476</td>
+<td>VMC</td>
+<td align="right">0.52</td>
+<td align="right">-1.49</td>
+<td align="right">48</td>
+<td align="right">-71.45</td>
+</tr>
+<tr>
+<td align="right">477</td>
+<td>WRB</td>
+<td align="right">0.63</td>
+<td align="right">0.18</td>
+<td align="right">46</td>
+<td align="right">8.09</td>
+</tr>
+<tr>
+<td align="right">478</td>
+<td>WAB</td>
+<td align="right">0.71</td>
+<td align="right">0.62</td>
+<td align="right">42</td>
+<td align="right">25.88</td>
+</tr>
+<tr>
+<td align="right">479</td>
+<td>WMT</td>
+<td align="right">0.64</td>
+<td align="right">-0.54</td>
+<td align="right">42</td>
+<td align="right">-22.67</td>
+</tr>
+<tr>
+<td align="right">480</td>
+<td>WBA</td>
+<td align="right">0.55</td>
+<td align="right">-0.16</td>
+<td align="right">40</td>
+<td align="right">-6.28</td>
+</tr>
+<tr>
+<td align="right">481</td>
+<td>DIS</td>
+<td align="right">0.6</td>
+<td align="right">-1.41</td>
+<td align="right">48</td>
+<td align="right">-67.44</td>
+</tr>
+<tr>
+<td align="right">482</td>
+<td>WM</td>
+<td align="right">0.68</td>
+<td align="right">0.25</td>
+<td align="right">47</td>
+<td align="right">11.9</td>
+</tr>
+<tr>
+<td align="right">483</td>
+<td>WAT</td>
+<td align="right">0.56</td>
+<td align="right">-0.59</td>
+<td align="right">45</td>
+<td align="right">-26.76</td>
+</tr>
+<tr>
+<td align="right">484</td>
+<td>WEC</td>
+<td align="right">0.6</td>
+<td align="right">0.35</td>
+<td align="right">42</td>
+<td align="right">14.87</td>
+</tr>
+<tr>
+<td align="right">485</td>
+<td>WFC</td>
+<td align="right">0.53</td>
+<td align="right">-0.29</td>
+<td align="right">47</td>
+<td align="right">-13.65</td>
+</tr>
+<tr>
+<td align="right">486</td>
+<td>WELL</td>
+<td align="right">0.66</td>
+<td align="right">0.14</td>
+<td align="right">41</td>
+<td align="right">5.86</td>
+</tr>
+<tr>
+<td align="right">487</td>
+<td>WST</td>
+<td align="right">0.57</td>
+<td align="right">-1.37</td>
+<td align="right">44</td>
+<td align="right">-60.18</td>
+</tr>
+<tr>
+<td align="right">488</td>
+<td>WDC</td>
+<td align="right">0.52</td>
+<td align="right">-0.26</td>
+<td align="right">44</td>
+<td align="right">-11.47</td>
+</tr>
+<tr>
+<td align="right">489</td>
+<td>WU</td>
+<td align="right">0.52</td>
+<td align="right">-0.32</td>
+<td align="right">44</td>
+<td align="right">-14.17</td>
+</tr>
+<tr>
+<td align="right">490</td>
+<td>WRK</td>
+<td align="right">0.56</td>
+<td align="right">-0.27</td>
+<td align="right">45</td>
+<td align="right">-12.29</td>
+</tr>
+<tr>
+<td align="right">491</td>
+<td>WY</td>
+<td align="right">0.52</td>
+<td align="right">-0.12</td>
+<td align="right">44</td>
+<td align="right">-5.5</td>
+</tr>
+<tr>
+<td align="right">492</td>
+<td>WHR</td>
+<td align="right">0.58</td>
+<td align="right">-1.3</td>
+<td align="right">38</td>
+<td align="right">-49.34</td>
+</tr>
+<tr>
+<td align="right">493</td>
+<td>WMB</td>
+<td align="right">0.5</td>
+<td align="right">-0.24</td>
+<td align="right">50</td>
+<td align="right">-11.83</td>
+</tr>
+<tr>
+<td align="right">494</td>
+<td>WLTW</td>
+<td align="right">0.66</td>
+<td align="right">-1.17</td>
+<td align="right">41</td>
+<td align="right">-48.04</td>
+</tr>
+<tr>
+<td align="right">495</td>
+<td>WYNN</td>
+<td align="right">0.57</td>
+<td align="right">-0.58</td>
+<td align="right">37</td>
+<td align="right">-21.4</td>
+</tr>
+<tr>
+<td align="right">496</td>
+<td>XEL</td>
+<td align="right">0.71</td>
+<td align="right">0.73</td>
+<td align="right">38</td>
+<td align="right">27.62</td>
+</tr>
+<tr>
+<td align="right">497</td>
+<td>XRX</td>
+<td align="right">0.58</td>
+<td align="right">-0.16</td>
+<td align="right">50</td>
+<td align="right">-8.18</td>
+</tr>
+<tr>
+<td align="right">498</td>
+<td>XLNX</td>
+<td align="right">0.5</td>
+<td align="right">-2.03</td>
+<td align="right">42</td>
+<td align="right">-85.34</td>
+</tr>
+<tr>
+<td align="right">499</td>
+<td>XYL</td>
+<td align="right">0.53</td>
+<td align="right">-0.42</td>
+<td align="right">47</td>
+<td align="right">-19.71</td>
+</tr>
+<tr>
+<td align="right">500</td>
+<td>YUM</td>
+<td align="right">0.44</td>
+<td align="right">-0.93</td>
+<td align="right">39</td>
+<td align="right">-36.26</td>
+</tr>
+<tr>
+<td align="right">501</td>
+<td>ZBRA</td>
+<td align="right">0.56</td>
+<td align="right">-1.99</td>
+<td align="right">43</td>
+<td align="right">-85.46</td>
+</tr>
+<tr>
+<td align="right">502</td>
+<td>ZBH</td>
+<td align="right">0.55</td>
+<td align="right">-1.79</td>
+<td align="right">44</td>
+<td align="right">-78.96</td>
+</tr>
+<tr>
+<td align="right">503</td>
+<td>ZION</td>
+<td align="right">0.54</td>
+<td align="right">-0.75</td>
+<td align="right">41</td>
+<td align="right">-30.81</td>
+</tr>
+<tr>
+<td align="right">504</td>
+<td>ZTS</td>
+<td align="right">0.57</td>
+<td align="right">-1.06</td>
+<td align="right">46</td>
+<td align="right">-48.98</td>
+</tr>
+</tbody></table>
