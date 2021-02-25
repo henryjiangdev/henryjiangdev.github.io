@@ -5,8 +5,8 @@
 	<header><title>Henry's Website</title></header>
 	<style>
 		html, body{
-			background-color: #35363A;
-			color: white;
+			background-color: white;
+			color: black;
 			display:table;
 			width: 99%;
 		}
@@ -40,20 +40,21 @@
 		#sidebar{
 			position: -webkit-sticky;
 			position: sticky;
+			background-color: black;
 			top: 0;
 			margin-top:1%;
 			float: left;
 			width: 10%;
 			text-align: center;
-			border-right: 1px solid white;
-			border-bottom: 1px solid white;
+			border-right: 1px solid black;
+			border-bottom: 1px solid black;
 		}
 		#name{
 			font-family:ballet;
 		}
 		.sidebar-div{
-			float: center;
-			border-left: 1px solid white;
+			float: right;
+			width: 90%;
 			border-top: 1px solid white;
 		}
 		#main{
@@ -64,7 +65,7 @@
 			word-wrap: break-word;
 		}
 		#main-content{
-			border-left: 1px dotted white;
+			border-left: 2px dashed black;
 			padding-left: 15%;
 			padding-right: 15%;
 		}
@@ -83,14 +84,18 @@
 	</script>
 	<body>
 		<div id="sidebar">
-			<div id="name"><h2>H J</h2></div>
-			<div class="sidebar-div"><a href="">	Home	</a></div><br>
-			<div class="sidebar-div"><a onclick="changeContent('/trading/trading.html')">Trading</a></div><br>
-			<div class="sidebar-div"><a onclick="">Data Sets</a></div><br>
+			<div id="name" style="color:white;"><h2>HJ</h2></div>
+			<div class="sidebar-div"><a href="">	Home	</a></div><br><br>
+			<div class="sidebar-div"><a onclick="changeContent('/trading/trading.html')">Trading</a></div><br><br>
+			<div class="sidebar-div"><a>Other</a></div><br><br>
 		</div>
 		<div id="main">
 			<div id="main-content">
-
+				<h1 style="text-align: center;">Henry Jiang</h1>
+				<h2 style="text-align: center;">Projects</h2>
+				<h2 style="text-align: center;">Experience</h2>
+				<h2 style="text-align: center;">Resume</h2>
+				<h2 style="text-align: center;">Contact</h2>
 			</div>
 		</div>
 	</body>
