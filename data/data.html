@@ -6,7 +6,7 @@
 	}
 	.insight-left{
 		color: black; 
-		width: 25%;
+		width: 20%;
 	}
 	.info{
 		color: black;
@@ -14,8 +14,24 @@
 	}
 </style>
 <h2 style="text-align: center;">Data</h2><hr>
-<p>Place where I either gather data, or analyze data.</p>
+<p>Place where I either gather data, analyze data, or do both!</p>
 <h3 style="text-align: center;">Insights</h3>
+<table style="width:100%">
+	<tr>
+		<th class="insight-left">Link</th>
+		<th class="insight-left">Data Set</th>
+		<th class="insight-left">Date Created</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td><a onclick="changeContent('/data/jobrequirements/jobrequirements.html')">Data Analyst Most Wanted Skills</a></td>
+		<td><a href="data/datasets/dataanalyst_jobreq.csv">dataanalyst_jobreq.csv</a></td>
+		<td>02/27/2021</td>
+		<td>In order it is SQL, Excel, PowerBI, Tableau, Python, R</td>
+	</tr>
+</table>
+<h3 style="text-align: center;">Data Sets</h3>
+<p>Data scraped manually or by python bots, or a mix of both.</p>
 <table style="width:100%">
 	<tr>
 		<th class="insight-left">Link</th>
@@ -23,8 +39,33 @@
 		<th>Description</th>
 	</tr>
 	<tr>
-		<td><a onclick="changeContent('/data/jobrequirements/jobrequirements.html')">Data Analyst Most Wanted Skills</a></td>
+		<td><a href='/data/dataset/dataanalyst_jobreq.csv'>dataanalyst_jobreq.csv</a></td>
 		<td>02/27/2021</td>
-		<td>In order it is SQL, Excel, PowerBI, Tableau, Python, R</td>
+		<td>company, href, html, location, title</td>
+	</tr>
+	<tr>
+		<td><a href='/data/dataset/shortsalevolumedata.csv'>shortsalevolumedata.csv</a></td>
+		<td>02/24/2021</td>
+		<td>index, date, shortvolume, totalvolume</td>
+	</tr>
+	<tr>
+		<td><a href='/data/dataset/ft500.csv'>ft500.csv</a></td>
+		<td>02/23/2021</td>
+		<td>symbol, security, sec filing, gics sector, gics sub-industry, headquarters location, date first added, cik, founded, </td>
+	</tr>
+	<tr>
+		<td><a href='/data/dataset/strat3.csv'>strat3.csv</a></td>
+		<td>02/25/2021</td>
+		<td>index, symbol, win%, expectedvalue, totalevents, pnl</td>
+	</tr>
+	<tr>
+		<td><a href='/data/dataset/strat2csv'>strat2.csv</a></td>
+		<td>02/24/2021</td>
+		<td>index, symbol, win%, expectedvalue, totalevents, pnl</td>
+	</tr>
+	<tr>
+		<td><a href='/data/dataset/strat1.csv'>strat1.csv</a></td>
+		<td>02/23/2021</td>
+		<td>index, symbol, win%, expectedvalue, totalevents, pnl</td>
 	</tr>
 </table>
